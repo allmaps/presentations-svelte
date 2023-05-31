@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  section {
+    @apply h-full w-full flex flex-col items-center justify-center p-8 gap-8;
+  }
+}

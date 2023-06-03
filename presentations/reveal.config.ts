@@ -9,7 +9,7 @@ export default {
   history: true,
   transition: 'fade' as const,
   disableLayout: true,
-  display: 'flex',
+  display: 'grid',
   plugins: [
     Highlight,
     // Markdown,

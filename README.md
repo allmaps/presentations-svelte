@@ -2,7 +2,7 @@
 
 Presentations about Allmaps for various events and conferences.
 
-See presentations.allmaps.org.
+See https://presentations.allmaps.org.
 
 Built using [Reveal.js](https://revealjs.com/), [SvelteKit](https://kit.svelte.dev/) and [Tailwind CSS](https://tailwindcss.com/).
 

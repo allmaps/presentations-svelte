@@ -39,4 +39,6 @@ To add a new presentation, create a new subdirectory in [`presentations`](presen
 
 In this Svelte file, each slide is placed in a `<section>` elemtent. Each section is a [CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/) which you can customize with Tailwind classed.
 
+Static files like images and JSON files can be placed in a new subdirectory in [`static`](static).
+
 _This repository is based on code from https://github.com/rajasegar/svelte-slides._

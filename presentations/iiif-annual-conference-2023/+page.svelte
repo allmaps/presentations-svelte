@@ -2,18 +2,22 @@
   import Title from '$lib/components/Title.svelte'
 </script>
 
+<svelte:head>
+  <title>Allmaps in Practice - IIIF Annual Conference 2023</title>
+</svelte:head>
+
 <Title>
   <h1 class="text-white">Allmaps<br /> in Practice</h1>
 </Title>
 
-<section class="flex-row">
+<section class="section-horizontal section-stretch	">
   <!-- <div class="flex flex-row"> -->
-  <p class="w-1/2">
+  <p class="">
     3 weeks ago, the IIIF Consortium and the IIIF Maps Technical Specification
     Group (TSG) published the Georeference Extension specification.
   </p>
   <a
-    class="w-1/2"
+    class=""
     href="https://iiif.io/news/2023/05/15/georef-extension-published/"
   >
     <img
@@ -36,14 +40,14 @@
   https://cdm21033.contentdm.oclc.org/digital/iiif/krt/5842/info.json
   https://annotations.allmaps.org/images/7c93afcee077e889
 -->
-<section class="flex-row p-0 gap-0">
-  <div class="w-1/2 p-4">
+<section class="section-stretch section-horizontal section-full">
+  <div class="p-4">
     Carta d'Italia alla scala di 1:500.000 / Touring Club Italiano (1950), Vrije
     Universiteit, Amsterdam
   </div>
   <img
     alt="Carta d'Italia alla scala di 1:500.000 / Touring Club Italiano"
-    class="w-1/2 h-full object-cover object-center"
+    class="image-cover"
     src="/images/vu-carta-d-italia-alla-scala-di-1-500-000-touring-club-italiano-1950.jpg"
   />
 </section>
@@ -55,13 +59,13 @@
   https://objects.library.uu.nl/manifest/iiif/v2/1874-372626
   https://annotations.allmaps.org/manifests/0ba97edae7d934bb
 -->
-<section class="flex-row p-0 gap-0">
-  <div class="w-1/2 p-4">
+<section class="section-stretch section-horizontal section-full">
+  <div class="p-4">
     Pianta della Città di Napoli (1815) Universiteit Utrecht
   </div>
   <img
     alt="Pianta della Città di Napoli"
-    class="w-1/2 h-full object-cover object-center"
+    class="image-cover"
     src="/images/uu-pianta-della-citta-di-napoli-1815.jpg"
   />
 </section>
@@ -73,13 +77,13 @@
   https://objects.library.uu.nl/manifest/iiif/v2/1874-372629
   https://annotations.allmaps.org/manifests/b900e0f16437cd5e
 -->
-<section class="flex-row p-0 gap-0">
-  <div class="w-1/2 p-4">
+<section class="section-stretch section-horizontal section-full">
+  <div class="p-4">
     Plan des fouilles de Pompei (1820), Universiteit Utrecht
   </div>
   <img
     alt="Plan des fouilles de Pompei"
-    class="w-1/2 h-full object-cover object-center"
+    class="image-cover"
     src="/images/uu-plan-des-fouilles-de-pompei-1820.jpg"
   />
 </section>
@@ -91,14 +95,14 @@
   https://collections.leventhalmap.org/search/commonwealth:ht250938v/manifest
   https://annotations.allmaps.org/manifests/c49a85fa4a1230ba
 -->
-<section class="flex-row p-0 gap-0">
-  <div class="w-1/2 p-4">
+<section class="section-stretch section-horizontal section-full">
+  <div class="p-4">
     Nuova pianta degli scavi di Pompei (1850), Leventhal Map Center at the
     Boston Public Library
   </div>
   <img
     alt="Nuova pianta degli scavi di Pompei"
-    class="w-1/2 h-full object-cover object-center"
+    class="image-cover"
     src="/images/lmec-nuova-pianta-degli-scavi-di-pompei-1850.jpg"
   />
 </section>
@@ -110,13 +114,13 @@
   https://gallica.bnf.fr/iiif/ark:/12148/btv1b530297246/f1/info.json
   https://annotations.allmaps.org/images/a2f8ff9579ddf337
 -->
-<section class="flex-row p-0 gap-0">
-  <div class="w-1/2 p-4">
+<section class="section-stretch section-horizontal section-full">
+  <div class="p-4">
     Plan de Pompeia (1890), Bibliothèque Nationale de France
   </div>
   <img
     alt="Plan de Pompeia"
-    class="w-1/2 h-full object-cover object-center"
+    class="image-cover"
     src="/images/bnf-plan-de-pompeia-1890.jpg"
   />
 </section>
@@ -127,7 +131,7 @@
 
 <section>Georeference Annotations: Used by all Allmaps components</section>
 
-<section class="h-full flex items-center">
+<section>
   Works with any IIIF map, no need for GIS infrastructure
 </section>
 
@@ -214,7 +218,3 @@ Conclusion (5m)
 - Finding maps accross collections
 - Organisation
 - How to collaborate -->
-
-<svelte:head>
-  <title>Allmaps in Practice - IIIF Annual Conference 2023</title>
-</svelte:head>

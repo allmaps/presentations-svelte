@@ -6,7 +6,7 @@ settings:
 
 dependencies:
   '@allmaps/ui':
-    specifier: 1.0.0-beta.15
+    specifier: ^1.0.0-beta.15
     version: 1.0.0-beta.15(@sveltejs/kit@1.5.0)(svelte@3.55.0)
   reveal.js:
     specifier: ^4.3.1

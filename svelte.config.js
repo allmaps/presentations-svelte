@@ -14,7 +14,7 @@ const config = {
       precompress: false
     }),
     files: {
-      routes: 'presentations',
+      routes: 'presentations'
     }
   }
 }

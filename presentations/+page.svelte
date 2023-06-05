@@ -8,6 +8,7 @@
 </script>
 
 <article class="p-8 w-80 mx-auto">
+  <h1 class="py-2 font-bold">Allmaps Presentations</h1>
   <ul class="list-disc">
     {#each presentations as presentation}
       <li>

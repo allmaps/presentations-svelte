@@ -10,11 +10,10 @@
   <h1 class="text-white">Allmaps<br /> in Practice</h1>
 </Title>
 
-<section class="section-horizontal section-stretch	">
-  <!-- <div class="flex flex-row"> -->
+<section class="section-horizontal section-stretch">
   <p class="">
     3 weeks ago, the IIIF Consortium and the IIIF Maps Technical Specification
-    Group (TSG) published the Georeference Extension specification.
+    Group (TSG) published the <strong>Georeference Extension</strong> specification.
   </p>
   <a
     class=""
@@ -25,7 +24,131 @@
       src="/images/iiif-annual-conference-2023/georeference-annotation.jpg"
     />
   </a>
-  <!-- </div> -->
+</section>
+
+<section>
+  <p>A Georeference Annotation stores data about a georeferenced image</p>
+  <pre>
+		<code
+    data-line-numbers="1-115|17-23|24-28|39-50"
+    data-trim data-noescape><script type="text/template">
+{
+  "type": "AnnotationPage",
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld"
+  ],
+  "items": [
+    {
+      "@context": [
+        "http://iiif.io/api/extension/georef/1/context.json",
+        "http://iiif.io/api/presentation/3/context.json"
+      ],
+      "id": "https://annotations.allmaps.org/maps/26e384d4efabdb32",
+      "type": "Annotation",
+      "motivation": "georeferencing",
+      "target": {
+        "type": "SpecificResource",
+        "source": {
+          // Reference to a IIIF resource
+          "@id": "https://cdm21033.contentdm.oclc.org/digital/iiif/krt/1022",
+          "type": "ImageService2",
+          "height": 4292,
+          "width": 3493
+        },
+        "selector": {
+          // Optional SVG Selector to select the cartographic part of an image
+          "type": "SvgSelector",
+          "value": "<svg><polygon points=\"196,3324 861,3323 856,4061 369,4057 370,3925 305,3852 191,3851\" /></svg>"
+        }
+      },
+      "body": {
+        "type": "FeatureCollection",
+        "transformation": {
+          "type": "polynomial",
+          "options": {
+            "order": 1
+          }
+        },
+        "features": [
+          {
+            // A list of ground control points (GCPs):
+            //   resource coordinates and corresponding geospatial coordinates
+            "type": "Feature",
+            "properties": {
+              "resourceCoords": [578, 3779]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [97.1805877, 3.2578402]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "resourceCoords": [349, 3855]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [95.7576865, 2.8399231]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "resourceCoords": [834, 3724]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [98.6704303, 3.5887634]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "resourceCoords": [396, 3629]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [96.1302895, 4.1471109]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "resourceCoords": [845, 4039]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [98.7838046, 1.7403690]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "resourceCoords": [252, 3345]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [95.3060364, 5.7804199]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "resourceCoords": [625, 3441]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [97.4831471, 5.2443204]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+    </script></code>
+  </pre>
 </section>
 
 <section>
@@ -42,8 +165,8 @@
 -->
 <section class="section-stretch section-horizontal section-full">
   <div class="p-4">
-    Carta d'Italia alla scala di 1:500.000 / Touring Club Italiano (1950), Vrije
-    Universiteit, Amsterdam
+    <p>Carta d'Italia alla scala di 1:500.000 / Touring Club Italiano (1950)</p>
+    <p class="font-light">Vrije Universiteit, Amsterdam</p>
   </div>
   <img
     alt="Carta d'Italia alla scala di 1:500.000 / Touring Club Italiano"
@@ -61,7 +184,8 @@
 -->
 <section class="section-stretch section-horizontal section-full">
   <div class="p-4">
-    Pianta della Città di Napoli (1815) Universiteit Utrecht
+    <p>Pianta della Città di Napoli (1815)</p>
+    <p class="font-light">Universiteit Utrecht</p>
   </div>
   <img
     alt="Pianta della Città di Napoli"
@@ -79,7 +203,8 @@
 -->
 <section class="section-stretch section-horizontal section-full">
   <div class="p-4">
-    Plan des fouilles de Pompei (1820), Universiteit Utrecht
+    <p>Plan des fouilles de Pompei (1820)</p>
+    <p class="font-light">Universiteit Utrecht</p>
   </div>
   <img
     alt="Plan des fouilles de Pompei"
@@ -97,8 +222,8 @@
 -->
 <section class="section-stretch section-horizontal section-full">
   <div class="p-4">
-    Nuova pianta degli scavi di Pompei (1850), Leventhal Map Center at the
-    Boston Public Library
+    <p>Nuova pianta degli scavi di Pompei (1850)</p>
+    <p class="font-light">Leventhal Map & Education Center at the Boston Public Library</p>
   </div>
   <img
     alt="Nuova pianta degli scavi di Pompei"
@@ -116,7 +241,8 @@
 -->
 <section class="section-stretch section-horizontal section-full">
   <div class="p-4">
-    Plan de Pompeia (1890), Bibliothèque Nationale de France
+    <p>Plan de Pompeia (1890)</p>
+    <p class="font-light">Bibliothèque Nationale de France</p>
   </div>
   <img
     alt="Plan de Pompeia"
@@ -126,14 +252,13 @@
 </section>
 
 <section>
-  Allmaps: Open source tools for curating, georeferencing and exploring IIIF maps
+  Allmaps: Open source tools for curating, georeferencing and exploring IIIF
+  maps
 </section>
 
 <section>Georeference Annotations: Used by all Allmaps components</section>
 
-<section>
-  Works with any IIIF map, no need for GIS infrastructure
-</section>
+<section>Works with any IIIF map, no need for GIS infrastructure</section>
 
 <section>Show Editor with Pompei map</section>
 
@@ -150,7 +275,7 @@ Other maps:
 <!-- https://collections.leventhalmap.org/search/commonwealth:vx024b87m/manifest  -->
 <!-- OF: -->
 <!-- https://collections.leventhalmap.org/search/commonwealth:dj530101x/manifest  -->
-
+<!-- SODOCU -->
 <!--
 
 Outline voor presentatie

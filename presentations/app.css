@@ -4,7 +4,7 @@
 
 @layer base {
   section {
-    @apply h-full w-full grid-flow-row p-8 gap-8 justify-items-center content-center;
+    @apply h-full w-full grid-flow-row auto-cols-fr p-8 gap-8 justify-items-center content-center;
     @apply [&>*]:min-h-0;
   }
 
@@ -22,6 +22,10 @@
 
   .image-cover {
     @apply h-full w-full object-cover object-center;
+  }
+
+  code {
+    @apply max-h-full rounded-lg;
   }
 
   iframe {

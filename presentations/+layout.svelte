@@ -1,12 +1,9 @@
 <script lang="ts">
   import { onMount, tick } from 'svelte'
   import { page } from '$app/stores'
-  // import Reveal from 'reveal.js'
 
   // import { Logo } from '@allmaps/ui'
   import logo from '$lib/shared/images/allmaps-logo.svg'
-
-  // import revealConfig from './reveal.config.js'
 
   import '@allmaps/ui/css/fonts.css'
   import 'reveal.js/dist/reveal.css'

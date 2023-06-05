@@ -11,14 +11,11 @@
 </Title>
 
 <section class="section-horizontal section-stretch">
-  <p class="">
+  <p>
     3 weeks ago, the IIIF Consortium and the IIIF Maps Technical Specification
     Group (TSG) published the <strong>Georeference Extension</strong> specification.
   </p>
-  <a
-    class=""
-    href="https://iiif.io/news/2023/05/15/georef-extension-published/"
-  >
+  <a href="https://iiif.io/news/2023/05/15/georef-extension-published/">
     <img
       alt="Georeference Annotation"
       src="/images/iiif-annual-conference-2023/georeference-annotation.jpg"
@@ -29,9 +26,8 @@
 <section>
   <p>A Georeference Annotation stores data about a georeferenced image</p>
   <pre>
-		<code
-    data-line-numbers="1-115|17-23|24-28|39-50"
-    data-trim data-noescape><script type="text/template">
+		<code data-line-numbers="1-115|17-23|24-28|39-50" data-trim data-noescape
+      ><script type="text/template">
 {
   "type": "AnnotationPage",
   "@context": [
@@ -147,7 +143,8 @@
     }
   ]
 }
-    </script></code>
+      </script></code
+    >
   </pre>
 </section>
 
@@ -223,7 +220,9 @@
 <section class="section-stretch section-horizontal section-full">
   <div class="p-4">
     <p>Nuova pianta degli scavi di Pompei (1850)</p>
-    <p class="font-light">Leventhal Map & Education Center at the Boston Public Library</p>
+    <p class="font-light">
+      Leventhal Map & Education Center at the Boston Public Library
+    </p>
   </div>
   <img
     alt="Nuova pianta degli scavi di Pompei"
@@ -254,11 +253,12 @@
 <section>
   Allmaps: Open source tools for curating, georeferencing and exploring IIIF
   maps
+
+  <!-- map monster! -->
+  <!-- <section>Works with any IIIF map, no need for GIS infrastructure</section> -->
 </section>
 
 <section>Georeference Annotations: Used by all Allmaps components</section>
-
-<section>Works with any IIIF map, no need for GIS infrastructure</section>
 
 <section>Show Editor with Pompei map</section>
 
@@ -343,3 +343,12 @@ Conclusion (5m)
 - Finding maps accross collections
 - Organisation
 - How to collaborate -->
+
+<section>
+  <a href="https://latest.allmaps.org">
+    <img
+      alt="Allmaps Latest"
+      src="/images/iiif-annual-conference-2023/allmaps-latest.jpg"
+    />
+  </a>
+</section>

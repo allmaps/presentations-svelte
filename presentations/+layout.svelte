@@ -1,12 +1,12 @@
 <script lang="ts">
   import { onMount, tick } from 'svelte'
   import { page } from '$app/stores'
-  import Reveal from 'reveal.js'
+  // import Reveal from 'reveal.js'
 
   // import { Logo } from '@allmaps/ui'
   import logo from '$lib/shared/images/allmaps-logo.svg'
 
-  import revealConfig from './reveal.config.js'
+  // import revealConfig from './reveal.config.js'
 
   import '@allmaps/ui/css/fonts.css'
   import 'reveal.js/dist/reveal.css'
@@ -37,6 +37,12 @@
 
   onMount(async () => {
     if (!showIndex) {
+      const RevealModule = await import('reveal.js')
+      const revealConfigModule = await import('./reveal.config.js')
+
+      const Reveal = RevealModule.default
+      const revealConfig = revealConfigModule.default
+
       await tick()
       deck = new Reveal(revealConfig)
       deck.initialize()

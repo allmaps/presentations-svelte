@@ -6,6 +6,7 @@
     path.replace('./', '').replace('/+page.svelte', '')
   )
 </script>
+
 <article class="p-8 w-80 mx-auto">
   <ul class="list-disc">
     {#each presentations as presentation}

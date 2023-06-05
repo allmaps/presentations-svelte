@@ -22,7 +22,7 @@
 <section>
   <img
     alt="Atlas of West-Roxbury"
-    src="/nde-delft-december-2022/images/west-roxbury.jpg"
+    src="/images/nde-delft-december-2022/west-roxbury.jpg"
   />
   <p>Van de kaarten weten we wáár in de wereld ze thuishoren</p>
 </section>
@@ -30,7 +30,7 @@
 <section>
   <img
     alt="Masks in QGIS"
-    src="/nde-delft-december-2022/images/qgis-masks.jpg"
+    src="/images/nde-delft-december-2022/qgis-masks.jpg"
   />
   <p>Hoe presenteren we al deze kaarten op een overzichtelijke manier?</p>
 </section>
@@ -38,7 +38,7 @@
 <section>
   <img
     alt="Clustering: overlap"
-    src="/nde-delft-december-2022/images/clustering/overlap.png"
+    src="/images/nde-delft-december-2022/clustering/overlap.png"
   />
   <p>Kaarten tonen hetzelfde gebied</p>
 </section>
@@ -46,7 +46,7 @@
 <section>
   <img
     alt="Clustering: distance"
-    src="/nde-delft-december-2022/images/clustering/distance.png"
+    src="/images/nde-delft-december-2022/clustering/distance.png"
   />
   <p>Grote onderlinge geografische afstand</p>
 </section>
@@ -54,7 +54,7 @@
 <section>
   <img
     alt="Clustering: scale"
-    src="/nde-delft-december-2022/images/clustering/scale.png"
+    src="/images/nde-delft-december-2022/clustering/scale.png"
   />
   <p>Verschil in schaal</p>
 </section>
@@ -62,7 +62,7 @@
 <section>
   <img
     alt="Clustering: stitching"
-    src="/nde-delft-december-2022/images/clustering/stitched.png"
+    src="/images/nde-delft-december-2022/clustering/stitched.png"
   />
   <p>Verschillende afbeeldingen vormen één kaart</p>
 </section>
@@ -140,7 +140,7 @@
 <section>
   <img
     alt="Clustering: combined"
-    src="/nde-delft-december-2022/images/clustering/combined.png"
+    src="/images/nde-delft-december-2022/clustering/combined.png"
   />
   <p>Hoe visualiseren we een collectie kaarten zoals hierboven?</p>
   <p>

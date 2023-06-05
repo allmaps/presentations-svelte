@@ -22,7 +22,7 @@
   >
     <img
       alt="Georeference Annotation"
-      src="/images/georeference-annotation.jpg"
+      src="/images/iiif-annual-conference-2023//georeference-annotation.jpg"
     />
   </a>
   <!-- </div> -->
@@ -48,7 +48,7 @@
   <img
     alt="Carta d'Italia alla scala di 1:500.000 / Touring Club Italiano"
     class="image-cover"
-    src="/images/vu-carta-d-italia-alla-scala-di-1-500-000-touring-club-italiano-1950.jpg"
+    src="/images/iiif-annual-conference-2023//vu-carta-d-italia-alla-scala-di-1-500-000-touring-club-italiano-1950.jpg"
   />
 </section>
 
@@ -66,7 +66,7 @@
   <img
     alt="Pianta della Città di Napoli"
     class="image-cover"
-    src="/images/uu-pianta-della-citta-di-napoli-1815.jpg"
+    src="/images/iiif-annual-conference-2023//uu-pianta-della-citta-di-napoli-1815.jpg"
   />
 </section>
 
@@ -84,7 +84,7 @@
   <img
     alt="Plan des fouilles de Pompei"
     class="image-cover"
-    src="/images/uu-plan-des-fouilles-de-pompei-1820.jpg"
+    src="/images/iiif-annual-conference-2023//uu-plan-des-fouilles-de-pompei-1820.jpg"
   />
 </section>
 
@@ -103,7 +103,7 @@
   <img
     alt="Nuova pianta degli scavi di Pompei"
     class="image-cover"
-    src="/images/lmec-nuova-pianta-degli-scavi-di-pompei-1850.jpg"
+    src="/images/iiif-annual-conference-2023/lmec-nuova-pianta-degli-scavi-di-pompei-1850.jpg"
   />
 </section>
 
@@ -121,7 +121,7 @@
   <img
     alt="Plan de Pompeia"
     class="image-cover"
-    src="/images/bnf-plan-de-pompeia-1890.jpg"
+    src="/images/iiif-annual-conference-2023//bnf-plan-de-pompeia-1890.jpg"
   />
 </section>
 

@@ -262,6 +262,300 @@
 
 <section>Show Editor with Pompei map</section>
 
+<section>
+  <img
+    alt="Colonial Map collection at Leiden University Libraries" 
+    src="/images/iiif-annual-conference-2023/ubl/ubl-kit-digital-collections.jpg"
+  />
+  <div class="">
+    <p>Leiden University Libraries</p>
+  </div>
+  <!-- https://digitalcollections.universiteitleiden.nl/view/collection/kitmaps -->
+</section>
+
+<section>
+  <img
+    alt="Excel with geospatial information" 
+    src="/images/iiif-annual-conference-2023/ubl/ubl-kit-original-excel.jpg"
+  />
+  <div>
+    <p>Excel with geospatial information about the KIT-collection</p>
+  </div>
+</section>
+
+<section>
+  <video data-autoplay src="/videos/iiif-annual-conference-2023/ubl-kit-screen-cap-results.mp4"></video>
+  <!-- https://observablehq.com/@allmaps/kit-maps -->
+</section>
+
+<section>
+  <img
+    alt="Map of LMEC" 
+    src="/images/iiif-annual-conference-2023/lmec/lmec-converted-example-landing-page.jpg"
+  />
+  <div>
+    <p>Leventhal Map & Education Center at the Boston Public Library</p>
+  </div>
+  <!-- https://www.leventhalmap.org -->
+</section>
+
+<section>
+  <img
+    alt="Script to convert Map Warper data" 
+    src="/images/iiif-annual-conference-2023/lmec/lmec-repo.jpg"
+  />
+  <div>
+    <p>Map Warper data to Georeference Annotations</p>
+  </div>
+  <!-- https://github.com/allmaps/lmec -->
+</section>
+
+<section>
+  <img
+    alt="LMEC map in Allmaps Editor" 
+    src="/images/iiif-annual-conference-2023/lmec/lmec-converted-example-editor.jpg"
+  />
+  <img
+    alt="LMEC map in Allmaps Viewer" 
+    src="/images/iiif-annual-conference-2023/lmec/lmec-converted-example-viewer.jpg"
+  />
+  <div>
+    <p>Map Warper data to Georeference Annotations</p>
+  </div>
+</section>
+
+<section>
+  <video data-autoplay src="/videos/iiif-annual-conference-2023/lmec-guide-screen-cap.mp4"></video>
+  <div>
+    <p>LMEC Guide for Georeferencing Boston Atlasses</p>
+  </div>
+  <!-- https://cartinal.leventhalmap.org/guides/georeferencing-with-allmaps.html -->
+</section>
+
+<section>
+  <img
+    alt="Atlascopify script"
+    src="/images/iiif-annual-conference-2023/lmec/lmec-atlascopify-step1.gif"
+  />
+  <div>
+    <p>Generating GeoTIFs for Atlascope</p>
+  </div>
+</section>
+
+<section>
+  <img
+    alt="Atlascopify script"
+    src="/images/iiif-annual-conference-2023/lmec/lmec-atlascopify-step2.gif"
+  />
+  <div>
+    <p>Generating GeoTIFs for Atlascope</p>
+  </div>
+</section>
+
+<section>
+  <img
+    alt="Atlascopify script"
+    src="/images/iiif-annual-conference-2023/lmec/lmec-atlascope.jpg"
+  />
+  <div>
+    <p>Atlascope</p>
+  </div>
+  <!-- https://www.atlascope.org -->
+</section>
+
+<section>
+  <img
+    alt="Soduco's website" 
+    src="/images/iiif-annual-conference-2023/soduco/soduco-website.jpg"
+  />
+  <div>
+    <p>SODUCO research project</p>
+  </div>
+  <!-- https://soduco.github.io -->
+</section>
+
+<section>
+  <img
+    alt="Table of Parisian atlasses" 
+    src="/images/iiif-annual-conference-2023/soduco/soduco-atlasses-table.jpg"
+  />
+  <img
+    alt="Sheet of atlas" 
+    src="/images/iiif-annual-conference-2023/soduco/soduco-atlas.jpg"
+  />
+  <img
+    alt="Trade directory" 
+    src="/images/iiif-annual-conference-2023/soduco/soduco-directories-single.jpg"
+  />
+  <img
+    alt="Comparison between trade directories" 
+    src="/images/iiif-annual-conference-2023/soduco/soduco-directories-comparison.jpg"
+  />
+  <div>
+    <p>Source material: municipal atlasses and trade directories</p>
+  </div>
+  <!-- https://soduco.github.io/about/ -->
+</section>
+
+<section>
+  <img
+    alt="Atlas Verniquet in Gallica" 
+    src="/images/iiif-annual-conference-2023/soduco/soduco-verniquet-gallica.jpg"
+  />
+  <img
+    alt="Atlas Verniquet in the David Rumsey Map Collection" 
+    src="/images/iiif-annual-conference-2023/soduco/soduco-verniquet-rumsey.jpg"
+  />
+  <div>
+    <p>Atlas Verniquet in Gallica and the David Rumsey Map Collection</p>
+  </div>
+  <!-- https://soduco.github.io/AllmapsAnnotations/ -->
+</section>
+
+<section>
+  <img
+    alt="Scripts to convert QGIS exports to Georeference Annotations" 
+    src="/images/iiif-annual-conference-2023/soduco/soduco-scripts.jpg"
+  />
+  <div>
+    <p>From QGIS to Georeference Annotations</p>
+  </div>
+  <!-- https://github.com/soduco/allmaps_annotations -->
+</section>
+
+<section>
+  <img
+    alt="Pull request of Soduco researcher for Image API 1.1 support" 
+    src="/images/iiif-annual-conference-2023/soduco/soduco-pr.jpg"
+  />
+  <div class="">
+    <p>Adding Image API 1.1 support for Gallica</p>
+  </div>
+  <!-- https://github.com/allmaps/allmaps/pull/20 -->
+</section>
+
+<section>
+  <video data-autoplay src="/videos/iiif-annual-conference-2023/soduco-verniquet-viewer-screen-capture.mp4"></video>
+  <div class="">
+    <p>Verniquet Atlas (1789-1799) in Allmaps</p>
+    <p class="font-light">Gallica/David Rumsey Map Collection</p>
+  </div>
+  <!-- https://soduco.github.io/AllmapsAnnotations/ -->
+</section>
+
+<section>
+  <video data-autoplay src="/videos/iiif-annual-conference-2023/soduco-viewer-municipal-atlas.mp4"></video>
+  <div class="">
+    <p>Municipal Atlas (1888) in Allmaps</p>
+  </div>
+  <!-- https://soduco.github.io/AllmapsAnnotations/ -->
+</section>
+
+<section>
+  <img
+    alt="Different types of image segmentation" 
+    src="/images/iiif-annual-conference-2023/soduco/soduco-images-segmentation-1.jpg"
+  />
+  <img
+    alt="Vectorizing a map"
+    src="/images/iiif-annual-conference-2023/soduco/soduco-images-segmentation-2.jpg"
+  />
+  <div>
+    <p>Generating masks with image segmentation?</p>
+  </div>
+  <!-- https://icdar21-mapseg.github.io -->
+</section>
+
+<section>
+  <img
+    alt="Observable Notebook demonstrating the Allmaps OpenLayers Plugin" 
+    src="/images/iiif-annual-conference-2023/ohm/ohm-notebook-open-layers-plugin.jpg"
+  />
+  <div>
+    <p>Allmaps OpenLayers Plugin</p>
+  </div>
+  <!-- https://observablehq.com/@allmaps/allmaps-openlayers-plugin -->
+</section>
+
+<section>
+  <video data-autoplay src="/videos/iiif-annual-conference-2023/ohm-xyz-screen-cap.mp4"></video>
+  <div>
+    <p>XYZ Tile Server for OpenHistoricalMap</p>
+  </div>
+  <!-- https://observablehq.com/@allmaps/allmaps-tile-server -->
+</section>
+
+<section>
+  <img
+    alt="Mid term presentations" 
+    src="/images/iiif-annual-conference-2023/berlage/berlage-photo-mid-term.jpg"
+  />
+  <div>
+    <p>Collaboration with The Berlage Center for Advanced Studies in Architecture and Urban Design</p>
+  </div>
+  <!-- https://theberlage.nl -->
+</section>
+
+<section>
+  <img
+    alt="Georeferenced river maps in the Allmaps Viewer" 
+    src="/images/iiif-annual-conference-2023/berlage/berlage-viewer-river-maps.jpg"
+  />
+  <div>
+    <p>Georeferencing River Maps</p>
+  </div>
+  <!-- https://github.com/theberlage/river-maps -->
+</section>
+
+<section>
+  <img
+    alt="Annotations in Placemark" 
+    src="/images/iiif-annual-conference-2023/berlage/berlage-placemark-annotations-chao.jpg"
+  />
+  <div>
+    <p>Annotating in Placemark</p>
+  </div>
+  <!-- https://www.placemark.io -->
+</section>
+
+<!-- <section>
+  <img
+    alt="Annotations in Placemark" 
+    src="/images/iiif-annual-conference-2023/berlage/berlage-placemark-annotations-lenneke.jpg"
+  />
+  Annotating in Placemark
+</section> -->
+
+<section>
+  <img
+    alt="Feedback in Placemark" 
+    src="/images/iiif-annual-conference-2023/berlage/berlage-placemark-final-conversation-2.jpg"
+  />
+  <div>
+    <p>And even feedback!</p>
+  </div>
+</section>
+
+<section>
+  <img
+    alt="River Atlas exhibition" 
+    src="/images/iiif-annual-conference-2023/berlage/berlage-exhibition-photo.jpg"
+  />
+  <div>
+    <p>River Atlas</p>
+    <p class="font-light">Physical exhibition</p>
+  </div>
+</section>
+
+<section>
+  <video data-autoplay src="/videos/iiif-annual-conference-2023/berlage-river-atlas-screen-cap.mp4"></video>
+  <div>
+    <p>River Atlas</p>
+    <p class="font-light">Digital app</p>
+    <!-- https://riveratlas.theberlage.nl -->
+  </div>
+</section>
+
 <!--
 Other maps:
 - Vesuvius: https://annotations.allmaps.org/maps/af023bfb3cebfef2

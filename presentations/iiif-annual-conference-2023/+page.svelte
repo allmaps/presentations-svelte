@@ -397,7 +397,7 @@
 </Title>
 
 <section>
-  <ol class="list-decimal px-40 space-y-8">
+  <ol class="list-decimal px-40 space-y-8 text-4xl">
     <li>
       Georeference any IIIF map with <strong>Allmaps Editor</strong>. Allmaps
       Editor produces Georeference Annotations
@@ -412,7 +412,7 @@
     </li>
     <li>
       We are working on plugins for <strong>OpenLayers</strong> and
-      <strong>Leaflet</strong>. And we've build a proxy server that produces XYZ
+      <strong>Leaflet</strong>. And we've built a proxy server that produces XYZ
       tiles and a CLI to export GeoJSON and GeoTIFF
     </li>
   </ol>

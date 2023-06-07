@@ -424,7 +424,7 @@
     muted
     data-loop
     data-autoplay
-    src="/video//iiif-annual-conference-2023/georeferencing-loc-venice.webm"
+    src="/video/iiif-annual-conference-2023/georeferencing-loc-venice.webm"
   />
 </section>
 
@@ -438,7 +438,7 @@
     muted
     data-loop
     data-autoplay
-    src="/video//iiif-annual-conference-2023/lmec-atlases.webm"
+    src="/video/iiif-annual-conference-2023/lmec-atlases.webm"
   />
 </section>
 
@@ -810,7 +810,7 @@
     muted
     data-loop
     data-autoplay
-    src="/video//iiif-annual-conference-2023/allmaps-website.webm"
+    src="/video/iiif-annual-conference-2023/allmaps-website.webm"
   />
 
   <div

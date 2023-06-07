@@ -1,5 +1,53 @@
 <script lang="ts">
   import Title from '$lib/components/Title.svelte'
+  import MapMonster from '$lib/components/MapMonster.svelte'
+
+  import mapThumbnails from './map-thumbnails.json'
+  import './style.css'
+
+  function randomFromArray<T>(array: readonly T[]): T {
+    return array[Math.floor(Math.random() * array.length)]
+  }
+
+  const moods = ['happy', 'excited', 'neutral', 'sad'] as const
+
+  function randomMood() {
+    return randomFromArray(moods)
+  }
+
+  const colors = [
+    'green',
+    'purple',
+    'red',
+    'yellow',
+    'orange',
+    'pink',
+    'blue'
+  ] as const
+
+  function randomColor() {
+    return randomFromArray(colors)
+  }
+
+  function randomFromInterval(min: number, max: number) {
+    return Math.random() * (max - min) + min
+  }
+
+  function randomTransform() {
+    const scale = randomFromInterval(0.8, 1.2)
+    const rotate = randomFromInterval(-15, 15)
+    const translateX = randomFromInterval(-15, 15)
+    const translateY = randomFromInterval(-15, 15)
+
+    return `scale(${scale}) rotate(${rotate}deg) translate(${translateX}px, ${translateY}px)`
+  }
+
+  let counter = 0
+  setInterval(() => {
+    counter++
+  }, 1000)
+
+  const mapMonstersClass = 'w-28'
 </script>
 
 <svelte:head>
@@ -9,6 +57,12 @@
 <Title>
   <h1 class="text-white">Allmaps<br /> in Practice</h1>
 </Title>
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- // Bert ////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <section class="section-horizontal section-stretch">
   <p>
@@ -25,7 +79,7 @@
 
 <section>
   <p>A Georeference Annotation stores data about a georeferenced image</p>
-  <pre>
+  <pre class="javascript">
 		<code data-line-numbers="1-115|17-23|24-28|39-50" data-trim data-noescape
       ><script type="text/template">
 {
@@ -149,8 +203,24 @@
 </section>
 
 <section>
-  Millions of IIIF maps from institutions around the world, now possible to
-  georeference, etc, etc
+  <div class="absolute top-0 left-0 w-full h-full">
+    {#each Array(mapThumbnails.length) as _, i (i)}
+      <img
+        class="absolute w-56"
+        style:transform={randomTransform()}
+        style:left={randomFromInterval(-200, window.innerWidth) + 'px'}
+        style:top={randomFromInterval(-200, window.innerHeight) + 'px'}
+        alt="Random map thumbnail"
+        src={`/images/iiif-annual-conference-2023/map-thumbnails/${mapThumbnails[i]}`}
+      />
+    {/each}
+  </div>
+  <!-- TODO: maps maps maps maps -->
+  <p class="px-40">
+    Using Georeference Annotations and IIIF, we can now georeference, warp and
+    overlay <strong>millions of digitized maps</strong> from institutions around
+    the world
+  </p>
 </section>
 
 <!--
@@ -250,21 +320,139 @@
   />
 </section>
 
-<section>
-  Allmaps: Open source tools for curating, georeferencing and exploring IIIF
-  maps
+<Title dark={false}>
+  <h1>Allmaps</h1>
+  <p>Open source tools for curating, georeferencing and exploring IIIF maps</p>
 
-  <!-- map monster! -->
-  <!-- <section>Works with any IIIF map, no need for GIS infrastructure</section> -->
+  <div
+    class="fragment absolute top-0 left-0 w-full h-full bg-white/70 text-left"
+  >
+    <div class="flex items-end h-full px-24 py-12">
+      <MapMonster mood="happy" color="pink">
+        <p class="p-4 strong">
+          Allmaps works with any IIIF map, no need for complex GIS
+          infrastructure, GeoTIFFs or map tiles!
+        </p>
+      </MapMonster>
+    </div>
+  </div>
+</Title>
+
+<section>
+  <ol class="list-decimal px-40 space-y-8">
+    <li>
+      Georeference any IIIF map with <strong>Allmaps Editor</strong>. Allmaps
+      Editor produces Georeference Annotations
+    </li>
+    <li>
+      These annotations can be stored using <strong>Allmaps API</strong>. But
+      you can also store them somewhere else, even on your own laptop
+    </li>
+    <li>
+      <strong>Allmaps Viewer</strong> reads Georeference Annotations and can warp
+      and overlay IIIF maps in the browser, using WebGL
+    </li>
+    <li>
+      We are working on plugins for <strong>OpenLayers</strong> and
+      <strong>Leaflet</strong>. And we've build a proxy server that produces XYZ
+      tiles and a CLI to export GeoJSON and GeoTIFF
+    </li>
+  </ol>
 </section>
 
-<section>Georeference Annotations: Used by all Allmaps components</section>
+<section>
+  <!-- TODO use data-autoplay for each video element, -->
+  <video
+    class="shadow-lg"
+    muted
+    data-loop
+    data-autoplay
+    src="/video//iiif-annual-conference-2023/georeferencing-loc-venice.webm"
+  />
+</section>
 
-<section>Show Editor with Pompei map</section>
+<!-- Video showing two LMEC atlases:
+  - https://collections.leventhalmap.org/search/commonwealth:vx024b87m/manifest
+  - https://collections.leventhalmap.org/search/commonwealth:dj530101x/manifest
+-->
+<section>
+  <video
+    class="shadow-lg"
+    muted
+    data-loop
+    data-autoplay
+    src="/video//iiif-annual-conference-2023/lmec-atlases.webm"
+  />
+</section>
+
+<section>
+  <a
+    href="https://dev.viewer.allmaps.org/?url=https%3A%2F%2Fpresentations.allmaps.org%2Fannotations%2Fiiif-annual-conference-2023%2Fpompeii.json"
+  >
+    <img
+      alt="Four maps of Pompeii, shown in Allmaps Viewer"
+      src="/images/iiif-annual-conference-2023/pompeii.jpg"
+    />
+  </a>
+</section>
+
+<section class="rainbow-background">
+  <a
+    href="https://dev.viewer.allmaps.org/?url=https%3A%2F%2Fpresentations.allmaps.org%2Fannotations%2Fiiif-annual-conference-2023%2Fpompeii.json"
+  >
+    <img
+      alt="Four maps of Pompeii, colorized with Allmaps Viewer"
+      src="/images/iiif-annual-conference-2023/pompeii-colorized.png"
+    />
+  </a>
+</section>
+
+<section>
+  <a href="https://latest.allmaps.org">
+    <img
+      alt="Allmaps Latest"
+      src="/images/iiif-annual-conference-2023/allmaps-latest.jpg"
+    />
+  </a>
+</section>
+
+<section class="gap-2 grid-cols-7 grid-rows-5">
+  <!-- TODO other monsters! -->
+  {#each Array(9) as _, i (`${i}-${counter}`)}
+    <div class={mapMonstersClass} style:transform={randomTransform()}>
+      <MapMonster
+        mood={randomMood()}
+        color={randomColor()}
+        shape={Math.floor(randomFromInterval(0, 5))}
+      />
+    </div>
+  {/each}
+  <div class="col-span-3 row-span-2">
+    Institutions around the world are starting to use Allmaps, <strong
+      >more than 23.000</strong
+    > georeferenced maps are already available
+  </div>
+
+  {#each Array(20) as _, i (`${i}-${counter}`)}
+    <div class={mapMonstersClass} style:transform={randomTransform()}>
+      <MapMonster
+        mood={randomMood()}
+        color={randomColor()}
+        shape={Math.floor(randomFromInterval(0, 5))}
+      />
+    </div>
+  {/each}
+</section>
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- // Jules ////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <section>
   <img
-    alt="Colonial Map collection at Leiden University Libraries" 
+    alt="Colonial Map collection at Leiden University Libraries"
     src="/images/iiif-annual-conference-2023/ubl/ubl-kit-digital-collections.jpg"
   />
   <div class="">
@@ -275,7 +463,7 @@
 
 <section>
   <img
-    alt="Excel with geospatial information" 
+    alt="Excel with geospatial information"
     src="/images/iiif-annual-conference-2023/ubl/ubl-kit-original-excel.jpg"
   />
   <div>
@@ -284,13 +472,18 @@
 </section>
 
 <section>
-  <video data-autoplay src="/videos/iiif-annual-conference-2023/ubl-kit-screen-cap-results.mp4"></video>
+  <video
+    muted
+    data-loop
+    data-autoplay
+    src="/videos/iiif-annual-conference-2023/ubl-kit-screen-cap-results.mp4"
+  />
   <!-- https://observablehq.com/@allmaps/kit-maps -->
 </section>
 
 <section>
   <img
-    alt="Map of LMEC" 
+    alt="Map of LMEC"
     src="/images/iiif-annual-conference-2023/lmec/lmec-converted-example-landing-page.jpg"
   />
   <div>
@@ -301,7 +494,7 @@
 
 <section>
   <img
-    alt="Script to convert Map Warper data" 
+    alt="Script to convert Map Warper data"
     src="/images/iiif-annual-conference-2023/lmec/lmec-repo.jpg"
   />
   <div>
@@ -312,11 +505,11 @@
 
 <section>
   <img
-    alt="LMEC map in Allmaps Editor" 
+    alt="LMEC map in Allmaps Editor"
     src="/images/iiif-annual-conference-2023/lmec/lmec-converted-example-editor.jpg"
   />
   <img
-    alt="LMEC map in Allmaps Viewer" 
+    alt="LMEC map in Allmaps Viewer"
     src="/images/iiif-annual-conference-2023/lmec/lmec-converted-example-viewer.jpg"
   />
   <div>
@@ -325,7 +518,12 @@
 </section>
 
 <section>
-  <video data-autoplay src="/videos/iiif-annual-conference-2023/lmec-guide-screen-cap.mp4"></video>
+  <video
+    muted
+    data-loop
+    data-autoplay
+    src="/videos/iiif-annual-conference-2023/lmec-guide-screen-cap.mp4"
+  />
   <div>
     <p>LMEC Guide for Georeferencing Boston Atlasses</p>
   </div>
@@ -365,7 +563,7 @@
 
 <section>
   <img
-    alt="Soduco's website" 
+    alt="Soduco's website"
     src="/images/iiif-annual-conference-2023/soduco/soduco-website.jpg"
   />
   <div>
@@ -376,19 +574,19 @@
 
 <section>
   <img
-    alt="Table of Parisian atlasses" 
+    alt="Table of Parisian atlasses"
     src="/images/iiif-annual-conference-2023/soduco/soduco-atlasses-table.jpg"
   />
   <img
-    alt="Sheet of atlas" 
+    alt="Sheet of atlas"
     src="/images/iiif-annual-conference-2023/soduco/soduco-atlas.jpg"
   />
   <img
-    alt="Trade directory" 
+    alt="Trade directory"
     src="/images/iiif-annual-conference-2023/soduco/soduco-directories-single.jpg"
   />
   <img
-    alt="Comparison between trade directories" 
+    alt="Comparison between trade directories"
     src="/images/iiif-annual-conference-2023/soduco/soduco-directories-comparison.jpg"
   />
   <div>
@@ -399,11 +597,11 @@
 
 <section>
   <img
-    alt="Atlas Verniquet in Gallica" 
+    alt="Atlas Verniquet in Gallica"
     src="/images/iiif-annual-conference-2023/soduco/soduco-verniquet-gallica.jpg"
   />
   <img
-    alt="Atlas Verniquet in the David Rumsey Map Collection" 
+    alt="Atlas Verniquet in the David Rumsey Map Collection"
     src="/images/iiif-annual-conference-2023/soduco/soduco-verniquet-rumsey.jpg"
   />
   <div>
@@ -414,7 +612,7 @@
 
 <section>
   <img
-    alt="Scripts to convert QGIS exports to Georeference Annotations" 
+    alt="Scripts to convert QGIS exports to Georeference Annotations"
     src="/images/iiif-annual-conference-2023/soduco/soduco-scripts.jpg"
   />
   <div>
@@ -424,8 +622,9 @@
 </section>
 
 <section>
+  <!-- svelte-ignore a11y-img-redundant-alt -->
   <img
-    alt="Pull request of Soduco researcher for Image API 1.1 support" 
+    alt="Pull request of Soduco researcher for Image API 1.1 support"
     src="/images/iiif-annual-conference-2023/soduco/soduco-pr.jpg"
   />
   <div class="">
@@ -435,7 +634,12 @@
 </section>
 
 <section>
-  <video data-autoplay src="/videos/iiif-annual-conference-2023/soduco-verniquet-viewer-screen-capture.mp4"></video>
+  <video
+    muted
+    data-loop
+    data-autoplay
+    src="/videos/iiif-annual-conference-2023/soduco-verniquet-viewer-screen-capture.mp4"
+  />
   <div class="">
     <p>Verniquet Atlas (1789-1799) in Allmaps</p>
     <p class="font-light">Gallica/David Rumsey Map Collection</p>
@@ -444,7 +648,12 @@
 </section>
 
 <section>
-  <video data-autoplay src="/videos/iiif-annual-conference-2023/soduco-viewer-municipal-atlas.mp4"></video>
+  <video
+    muted
+    data-loop
+    data-autoplay
+    src="/videos/iiif-annual-conference-2023/soduco-viewer-municipal-atlas.mp4"
+  />
   <div class="">
     <p>Municipal Atlas (1888) in Allmaps</p>
   </div>
@@ -452,8 +661,9 @@
 </section>
 
 <section>
+  <!-- svelte-ignore a11y-img-redundant-alt -->
   <img
-    alt="Different types of image segmentation" 
+    alt="Different types of image segmentation"
     src="/images/iiif-annual-conference-2023/soduco/soduco-images-segmentation-1.jpg"
   />
   <img
@@ -468,7 +678,7 @@
 
 <section>
   <img
-    alt="Observable Notebook demonstrating the Allmaps OpenLayers Plugin" 
+    alt="Observable Notebook demonstrating the Allmaps OpenLayers Plugin"
     src="/images/iiif-annual-conference-2023/ohm/ohm-notebook-open-layers-plugin.jpg"
   />
   <div>
@@ -478,7 +688,12 @@
 </section>
 
 <section>
-  <video data-autoplay src="/videos/iiif-annual-conference-2023/ohm-xyz-screen-cap.mp4"></video>
+  <video
+    muted
+    data-loop
+    data-autoplay
+    src="/videos/iiif-annual-conference-2023/ohm-xyz-screen-cap.mp4"
+  />
   <div>
     <p>XYZ Tile Server for OpenHistoricalMap</p>
   </div>
@@ -487,18 +702,21 @@
 
 <section>
   <img
-    alt="Mid term presentations" 
+    alt="Mid term presentations"
     src="/images/iiif-annual-conference-2023/berlage/berlage-photo-mid-term.jpg"
   />
   <div>
-    <p>Collaboration with The Berlage Center for Advanced Studies in Architecture and Urban Design</p>
+    <p>
+      Collaboration with The Berlage Center for Advanced Studies in Architecture
+      and Urban Design
+    </p>
   </div>
   <!-- https://theberlage.nl -->
 </section>
 
 <section>
   <img
-    alt="Georeferenced river maps in the Allmaps Viewer" 
+    alt="Georeferenced river maps in the Allmaps Viewer"
     src="/images/iiif-annual-conference-2023/berlage/berlage-viewer-river-maps.jpg"
   />
   <div>
@@ -509,7 +727,7 @@
 
 <section>
   <img
-    alt="Annotations in Placemark" 
+    alt="Annotations in Placemark"
     src="/images/iiif-annual-conference-2023/berlage/berlage-placemark-annotations-chao.jpg"
   />
   <div>
@@ -520,7 +738,7 @@
 
 <!-- <section>
   <img
-    alt="Annotations in Placemark" 
+    alt="Annotations in Placemark"
     src="/images/iiif-annual-conference-2023/berlage/berlage-placemark-annotations-lenneke.jpg"
   />
   Annotating in Placemark
@@ -528,7 +746,7 @@
 
 <section>
   <img
-    alt="Feedback in Placemark" 
+    alt="Feedback in Placemark"
     src="/images/iiif-annual-conference-2023/berlage/berlage-placemark-final-conversation-2.jpg"
   />
   <div>
@@ -538,7 +756,7 @@
 
 <section>
   <img
-    alt="River Atlas exhibition" 
+    alt="River Atlas exhibition"
     src="/images/iiif-annual-conference-2023/berlage/berlage-exhibition-photo.jpg"
   />
   <div>
@@ -548,7 +766,12 @@
 </section>
 
 <section>
-  <video data-autoplay src="/videos/iiif-annual-conference-2023/berlage-river-atlas-screen-cap.mp4"></video>
+  <video
+    muted
+    data-loop
+    data-autoplay
+    src="/videos/iiif-annual-conference-2023/berlage-river-atlas-screen-cap.mp4"
+  />
   <div>
     <p>River Atlas</p>
     <p class="font-light">Digital app</p>
@@ -556,93 +779,40 @@
   </div>
 </section>
 
-<!--
-Other maps:
-- Vesuvius: https://annotations.allmaps.org/maps/af023bfb3cebfef2
-- Selerno: https://www.davidrumsey.com/luna/servlet/iiif/m/RUMSEY~8~1~328487~90096994/manifest
--->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- // Bert & Jules /////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-<!-- Allmaps Latest, nu al 23,000 maps-->
-<!-- New Allmaps Viewer, stitch together -->
-
-<!-- LMEC STITCH together -->
-<!-- https://collections.leventhalmap.org/search/commonwealth:vx024b87m/manifest  -->
-<!-- OF: -->
-<!-- https://collections.leventhalmap.org/search/commonwealth:dj530101x/manifest  -->
-<!-- SODOCU -->
-<!--
-
-Outline voor presentatie
-
-Idee: alles kan ook lokaal, plaatjes, filmpjes, maar geen iframes
-Filmpjes opnemen met Kap
-
-Abstract: https://docs.google.com/document/d/1fYXC0qp6O3Mq3murwbCuc1c3ukiyw0S70W0EZ8RR40E/edit?usp=sharing
-
-Allmaps in Practice:
-
-Introduction (7m):
-
-- What is Allmaps?
-- open source, partnerships, funding, etc.
-- Publication of the Georef spec
-- short walk-through, from manifest to georef to viewer
-- Almaps Latest
-- Launch of the new Allmaps Viewer
-
-Use cases (8m):
-
-- 1 Institutions
-- 1.1 Leiden University Libraries - DATA IMPORT & CONVERSION
-- Many institutions already have georeferencing data which is unused. How to make it useful?
-- Example of existing data (Hoekpunten KIT?)
-- Example of converted georef annotation
-- Even inherited/incomplete data can be used!
-- 1.2 LMEC @ Boston Public Library – GEOREFERENCING WITH ALLMAPS
-- Used Map Warper and are switching to Allmaps
-Converting existing data
-- Crowd sourcing
-- Making sharable [guides](https://cartinal.leventhalmap.org/guides/georeferencing-with-allmaps.html#checklist-table-of-contents)
-- ask for collections (latest.allmaps.org only shows individual maps)
-- Converting to other formats
-- Testing components
-- 2. Researchers
-- 2.1 SODUCO - RESEARCH WORKFLOWS WITH IIIF & ALLMAPS
-- Building research projects on top of institutional APIs
-- Close comparison between different editions of maps: Gallica vergelijken met Rumsey
-- 2.2 OpenHistoricalMap COMPATIBILITY WITH EXISTING GIS APPLICATIONS
-- XYZ tile server for compatibility with GIS software
-- 3. Educators
-- 3.1 The Berlage (River Maps) STORYTELLING WITH MAPS
-- Collection historical material from different sources
-- Studying designs in context
-- Working accross scales
-- Using Placemark
-- Digital/physical relationship
-
-Conclusion (5m)
-
-- Plans
-- Allmaps Viewer
-- thin plate spline
-- Allmaps Editor
-- Improving the georeferencer tool
-- Error visualisation
-- Editing JSON
-- Versioning
-- Custom reference map
-- Allmaps Curator
-- Managing Crowd Sourcing projects
-- Allmaps Explorer
-- Finding maps accross collections
-- Organisation
-- How to collaborate -->
-
-<section>
-  <a href="https://latest.allmaps.org">
-    <img
-      alt="Allmaps Latest"
-      src="/images/iiif-annual-conference-2023/allmaps-latest.jpg"
-    />
-  </a>
+<section class="section-horizontal section-stretch section-no-logo">
+  <p>
+    See <a class="underline" href="https://allmaps.org">allmaps.org</a> and
+    <a class="underline" href="https://github.com/allmaps">github.com/allmaps</a
+    >
+    for more details about Allmaps!
+  </p>
+  <video
+    muted
+    data-loop
+    data-autoplay
+    src="/video//iiif-annual-conference-2023/allmaps-website.webm"
+  />
 </section>
+
+<section class="section-no-logo section-horizontal section-stretch">
+  <p>Thanks!</p>
+
+  <MapMonster mood="excited" color="purple">
+    <p class="text-left">Scan this QR code to view this presentation:</p>
+    <a href="https://presentations.allmaps.org/iiif-annual-conference-2023">
+      <img
+        class="w-full"
+        alt="QR code that links to these slides"
+        src="/images/iiif-annual-conference-2023/qr-code.svg"
+      /></a
+    >
+  </MapMonster>
+</section>
+
+<section>Video about Bryan and pin!</section>

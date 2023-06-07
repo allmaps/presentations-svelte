@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount, tick } from 'svelte'
+  import { fade } from 'svelte/transition';
   import { page } from '$app/stores'
 
   // import { Logo } from '@allmaps/ui'
@@ -16,7 +17,7 @@
 
   const showIndex = $page.route.id === '/'
 
-  let slideIndex = 0
+  let displayLogo = false
 
   function handleLogoClick(event: MouseEvent) {
     if (event.shiftKey) {
@@ -27,8 +28,9 @@
   }
 
   function handleSlideChanged(event: unknown) {
-    if (event && typeof event === 'object' && 'indexh' in event) {
-      slideIndex = event.indexh as number
+    if (event && typeof event === 'object' && 'currentSlide' in event) {
+      const section = event.currentSlide as HTMLElement
+      displayLogo = !section.classList.contains('section-no-logo')
     }
   }
 
@@ -58,8 +60,8 @@
       <slot />
     </div>
   </div>
-  {#if slideIndex > 0}
-    <div class="absolute bottom-0 right-0 z-50 p-5">
+  {#if displayLogo}
+    <div transition:fade class="absolute bottom-0 right-0 z-50 p-5">
       <div class="w-14">
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <img

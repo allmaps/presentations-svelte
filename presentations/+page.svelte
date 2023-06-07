@@ -18,4 +18,7 @@
       </li>
     {/each}
   </ul>
+  <p class="py-2">
+    The source code of these presentations can be found on <a href="https://github.com/allmaps/presentations">GitHub</a>.
+  </p>
 </article>

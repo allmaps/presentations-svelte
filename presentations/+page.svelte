@@ -7,7 +7,7 @@
   )
 </script>
 
-<article class="p-8 w-80 mx-auto">
+<article class="p-8 max-w-lg mx-auto">
   <h1 class="py-2 font-bold">Allmaps Presentations</h1>
   <ul class="list-disc">
     {#each presentations as presentation}
@@ -19,6 +19,9 @@
     {/each}
   </ul>
   <p class="py-2">
-    The source code of these presentations can be found on <a href="https://github.com/allmaps/presentations">GitHub</a>.
+    The source code of these presentations can be found on <a
+      class="underline"
+      href="https://github.com/allmaps/presentations">GitHub</a
+    >.
   </p>
 </article>

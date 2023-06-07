@@ -1,9 +1,10 @@
 <script lang="ts">
   import { onMount, tick } from 'svelte'
-  import { fade } from 'svelte/transition';
+  import { fade } from 'svelte/transition'
   import { page } from '$app/stores'
 
-  // import { Logo } from '@allmaps/ui'
+  import { reveal, currentSlide } from '$lib/shared/stores/reveal.js'
+
   import logo from '$lib/shared/images/allmaps-logo.svg'
 
   import '@allmaps/ui/css/fonts.css'
@@ -13,24 +14,22 @@
   import './theme.css'
   import './app.css'
 
-  let deck: Reveal.Api
-
   const showIndex = $page.route.id === '/'
 
   let displayLogo = false
 
   function handleLogoClick(event: MouseEvent) {
     if (event.shiftKey) {
-      deck.prev()
+      $reveal.prev()
     } else {
-      deck.next()
+      $reveal.next()
     }
   }
 
   function handleSlideChanged(event: unknown) {
     if (event && typeof event === 'object' && 'currentSlide' in event) {
-      const section = event.currentSlide as HTMLElement
-      displayLogo = !section.classList.contains('section-no-logo')
+      $currentSlide = event.currentSlide as HTMLElement
+      displayLogo = !$currentSlide.classList.contains('section-no-logo')
     }
   }
 
@@ -43,11 +42,11 @@
       const revealConfig = revealConfigModule.default
 
       await tick()
-      deck = new Reveal(revealConfig)
-      deck.initialize()
+      $reveal = new Reveal(revealConfig)
+      $reveal.initialize()
 
-      deck.on('ready', handleSlideChanged)
-      deck.on('slidechanged', handleSlideChanged)
+      $reveal.on('ready', handleSlideChanged)
+      $reveal.on('slidechanged', handleSlideChanged)
     }
   })
 </script>

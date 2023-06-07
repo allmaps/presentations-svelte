@@ -8,8 +8,6 @@
   class="speech-balloon
     p-4 relative
     pointer-events-auto
-    w-[30rem]
-    max-w-[90%]
     text-white
     rounded-md
     shadow-md

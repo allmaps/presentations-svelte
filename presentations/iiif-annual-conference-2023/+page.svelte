@@ -679,15 +679,6 @@
 </section>
 
 <section>
-  <!-- https://observablehq.com/@allmaps/allmaps-openlayers-plugin -->
-  <p>Allmaps OpenLayers Plugin</p>
-  <img
-    alt="Observable Notebook demonstrating the Allmaps OpenLayers Plugin"
-    src="/images/iiif-annual-conference-2023/ohm/ohm-notebook-open-layers-plugin.png"
-  />
-</section>
-
-<section>
   <!-- https://observablehq.com/@allmaps/allmaps-tile-server -->
   <p>XYZ Tile Server for OpenHistoricalMap</p>
   <video

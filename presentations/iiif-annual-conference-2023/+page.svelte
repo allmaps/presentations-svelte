@@ -430,7 +430,7 @@
     muted
     data-loop
     data-autoplay
-    src="/video/iiif-annual-conference-2023/georeferencing-loc-venice.webm"
+    data-src="/video/iiif-annual-conference-2023/georeferencing-loc-venice.webm"
   />
 </section>
 
@@ -444,7 +444,7 @@
     muted
     data-loop
     data-autoplay
-    src="/video/iiif-annual-conference-2023/lmec-atlases.webm"
+    data-src="/video/iiif-annual-conference-2023/lmec-atlases.webm"
   />
 </section>
 
@@ -544,7 +544,7 @@
     muted
     data-loop
     data-autoplay
-    src="/videos/iiif-annual-conference-2023/ubl-kit-screen-cap-results.mp4"
+    data-src="/videos/iiif-annual-conference-2023/ubl-kit-screen-cap-results.mp4"
   />
 </section>
 
@@ -581,7 +581,7 @@
     muted
     data-loop
     data-autoplay
-    src="/videos/iiif-annual-conference-2023/lmec-guide-screen-cap.mp4"
+    data-src="/videos/iiif-annual-conference-2023/lmec-guide-screen-cap.mp4"
   />
 </section>
 
@@ -670,7 +670,7 @@
     muted
     data-loop
     data-autoplay
-    src="/videos/iiif-annual-conference-2023/soduco-verniquet-viewer-screen-capture.mp4"
+    data-src="/videos/iiif-annual-conference-2023/soduco-verniquet-viewer-screen-capture.mp4"
   />
 </section>
 
@@ -681,7 +681,7 @@
     muted
     data-loop
     data-autoplay
-    src="/videos/iiif-annual-conference-2023/soduco-viewer-municipal-atlas.mp4"
+    data-src="/videos/iiif-annual-conference-2023/soduco-viewer-municipal-atlas.mp4"
   />
 </section>
 
@@ -710,7 +710,7 @@
     muted
     data-loop
     data-autoplay
-    src="/videos/iiif-annual-conference-2023/ohm-xyz-screen-cap.mp4"
+    data-src="/videos/iiif-annual-conference-2023/ohm-xyz-screen-cap.mp4"
   />
 </section>
 
@@ -763,7 +763,7 @@
     muted
     data-loop
     data-autoplay
-    src="/videos/iiif-annual-conference-2023/berlage-river-atlas-screen-cap.mp4"
+    data-src="/videos/iiif-annual-conference-2023/berlage-river-atlas-screen-cap.mp4"
   />
 </section>
 
@@ -804,7 +804,7 @@
     muted
     data-loop
     data-autoplay
-    src="/video/iiif-annual-conference-2023/allmaps-website.webm"
+    data-src="/video/iiif-annual-conference-2023/allmaps-website.webm"
   />
 
   <div

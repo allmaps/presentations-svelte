@@ -131,6 +131,7 @@
   </p>
   <a href="https://iiif.io/news/2023/05/15/georef-extension-published/">
     <img
+      loading="lazy"
       alt="Georeference Annotation"
       src="/images/iiif-annual-conference-2023/georeference-annotation.jpg"
     />
@@ -297,6 +298,7 @@
   <img
     alt="Carta d'Italia alla scala di 1:500.000 / Touring Club Italiano"
     class="image-cover"
+    loading="lazy"
     src="/images/iiif-annual-conference-2023/vu-carta-d-italia-alla-scala-di-1-500-000-touring-club-italiano-1950.jpg"
   />
 </section>
@@ -316,6 +318,7 @@
   <img
     alt="Pianta della Città di Napoli"
     class="image-cover"
+    loading="lazy"
     src="/images/iiif-annual-conference-2023/uu-pianta-della-citta-di-napoli-1815.jpg"
   />
 </section>
@@ -335,6 +338,7 @@
   <img
     alt="Plan des fouilles de Pompei"
     class="image-cover"
+    loading="lazy"
     src="/images/iiif-annual-conference-2023/uu-plan-des-fouilles-de-pompei-1820.jpg"
   />
 </section>
@@ -356,6 +360,7 @@
   <img
     alt="Nuova pianta degli scavi di Pompei"
     class="image-cover"
+    loading="lazy"
     src="/images/iiif-annual-conference-2023/lmec-nuova-pianta-degli-scavi-di-pompei-1850.jpg"
   />
 </section>
@@ -375,6 +380,7 @@
   <img
     alt="Plan de Pompeia"
     class="image-cover"
+    loading="lazy"
     src="/images/iiif-annual-conference-2023/bnf-plan-de-pompeia-1890.jpg"
   />
 </section>
@@ -448,6 +454,7 @@
   >
     <img
       alt="Four maps of Pompeii, shown in Allmaps Viewer"
+      loading="lazy"
       src="/images/iiif-annual-conference-2023/pompeii.jpg"
     />
   </a>
@@ -459,6 +466,7 @@
   >
     <img
       alt="Four maps of Pompeii, colorized with Allmaps Viewer"
+      loading="lazy"
       src="/images/iiif-annual-conference-2023/pompeii-colorized.png"
     />
   </a>
@@ -496,6 +504,7 @@
   <a href="https://latest.allmaps.org">
     <img
       alt="Allmaps Latest"
+      loading="lazy"
       src="/images/iiif-annual-conference-2023/allmaps-latest.jpg"
     />
   </a>
@@ -514,6 +523,7 @@
   </div>
   <img
     alt="Colonial Map collection at Leiden University Libraries"
+    loading="lazy"
     src="/images/iiif-annual-conference-2023/ubl/ubl-kit-digital-collections.png"
   />
 </section>
@@ -522,6 +532,7 @@
   <p>Spreadsheet with geospatial information about the KIT Collection</p>
   <img
     alt="Excel with geospatial information"
+    loading="lazy"
     src="/images/iiif-annual-conference-2023/ubl/ubl-kit-original-excel.png"
   />
 </section>
@@ -542,6 +553,7 @@
   <p>Leventhal Map & Education Center at the Boston Public Library (LMEC)</p>
   <img
     alt="Map of LMEC"
+    loading="lazy"
     src="/images/iiif-annual-conference-2023/lmec/lmec-converted-example-landing-page.png"
   />
 </section>
@@ -551,10 +563,12 @@
   <div class="flex flex-row w-full [&>*]:min-w-0">
     <img
       alt="LMEC map in Allmaps Editor"
+      loading="lazy"
       src="/images/iiif-annual-conference-2023/lmec/lmec-converted-example-editor.png"
     />
     <img
       alt="LMEC map in Allmaps Viewer"
+      loading="lazy"
       src="/images/iiif-annual-conference-2023/lmec/lmec-converted-example-viewer.png"
     />
   </div>
@@ -575,6 +589,7 @@
   <p>Using Allmaps CLI to generate GeoTIFFs for Atlascope</p>
   <img
     alt="Atlascopify script"
+    loading="lazy"
     src="/images/iiif-annual-conference-2023/lmec/lmec-atlascopify-step2.gif"
   />
 </section>
@@ -584,6 +599,7 @@
   <p>Atlascope</p>
   <img
     alt="Atlascopify script"
+    loading="lazy"
     src="/images/iiif-annual-conference-2023/lmec/lmec-atlascope.png"
   />
 </section>
@@ -593,6 +609,7 @@
   <p>SODUCO research project</p>
   <img
     alt="Soduco's website"
+    loading="lazy"
     src="/images/iiif-annual-conference-2023/soduco/soduco-website.png"
   />
 </section>
@@ -605,18 +622,22 @@
   >
     <img
       alt="Table of Parisian atlasses"
+      loading="lazy"
       src="/images/iiif-annual-conference-2023/soduco/soduco-atlasses-table.jpg"
     />
     <img
       alt="Sheet of atlas"
+      loading="lazy"
       src="/images/iiif-annual-conference-2023/soduco/soduco-atlas.jpg"
     />
     <img
       alt="Trade directory"
+      loading="lazy"
       src="/images/iiif-annual-conference-2023/soduco/soduco-directories-single.jpg"
     />
     <img
       alt="Comparison between trade directories"
+      loading="lazy"
       src="/images/iiif-annual-conference-2023/soduco/soduco-directories-comparison.jpg"
     />
   </div>
@@ -628,10 +649,12 @@
   <div class="flex flex-row w-full [&>*]:min-w-0">
     <img
       alt="Atlas Verniquet in Gallica"
+      loading="lazy"
       src="/images/iiif-annual-conference-2023/soduco/soduco-verniquet-gallica.png"
     />
     <img
       alt="Atlas Verniquet in the David Rumsey Map Collection"
+      loading="lazy"
       src="/images/iiif-annual-conference-2023/soduco/soduco-verniquet-rumsey.png"
     />
   </div>
@@ -669,10 +692,12 @@
     <!-- svelte-ignore a11y-img-redundant-alt -->
     <img
       alt="Different types of image segmentation"
+      loading="lazy"
       src="/images/iiif-annual-conference-2023/soduco/soduco-images-segmentation-1.jpg"
     />
     <img
       alt="Vectorizing a map"
+      loading="lazy"
       src="/images/iiif-annual-conference-2023/soduco/soduco-images-segmentation-2.jpg"
     />
   </div>
@@ -697,6 +722,7 @@
   </p>
   <img
     alt="Mid term presentations"
+    loading="lazy"
     src="/images/iiif-annual-conference-2023/berlage/berlage-photo-mid-term.jpg"
   />
 </section>
@@ -706,6 +732,7 @@
   <p>Georeferencing Dutch river maps</p>
   <img
     alt="Georeferenced river maps in the Allmaps Viewer"
+    loading="lazy"
     src="/images/iiif-annual-conference-2023/berlage/berlage-viewer-river-maps.png"
   />
 </section>
@@ -715,6 +742,7 @@
   <p>Annotating in Placemark</p>
   <img
     alt="Annotations in Placemark"
+    loading="lazy"
     src="/images/iiif-annual-conference-2023/berlage/berlage-placemark-annotations-chao.png"
   />
 </section>
@@ -723,6 +751,7 @@
   <p>River Atlas <span class="font-light">- physical exhibition</span></p>
   <img
     alt="River Atlas exhibition"
+    loading="lazy"
     src="/images/iiif-annual-conference-2023/berlage/berlage-exhibition-photo.jpg"
   />
 </section>
@@ -749,10 +778,12 @@
   <div class="flex flex-row w-full [&>*]:min-w-0 gap-12">
     <img
       alt="TPS map warping"
+      loading="lazy"
       src="/images/iiif-annual-conference-2023/tps/lowercountries_tps.png"
     />
     <img
       alt="TPS map warping with removed background"
+      loading="lazy"
       src="/images/iiif-annual-conference-2023/tps/lowercountries_tps_removebackground.png"
     />
   </div>

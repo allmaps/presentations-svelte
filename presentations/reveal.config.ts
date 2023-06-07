@@ -1,7 +1,7 @@
 import Highlight from 'reveal.js/plugin/highlight/highlight'
 // import Markdown from 'reveal.js/plugin/markdown/markdown'
 // import MathReveal from 'reveal.js/plugin/math/math'
-import RevealNotes from 'reveal.js/plugin/notes/notes'
+// import RevealNotes from 'reveal.js/plugin/notes/notes'
 
 export default {
   controls: false,
@@ -11,11 +11,11 @@ export default {
   disableLayout: true,
   display: 'grid',
   plugins: [
-    Highlight,
+    Highlight
     // Markdown,
     // MathReveal.MathJax2,
     // MathReveal.KaTeX,
-    RevealNotes
+    // RevealNotes
   ],
   hash: true
   // mathjax2: {

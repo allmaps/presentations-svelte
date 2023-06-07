@@ -547,15 +547,6 @@
 </section>
 
 <section>
-  <!-- https://github.com/allmaps/lmec -->
-  <p>Map Warper data to Georeference Annotations</p>
-  <img
-    alt="Script to convert Map Warper data"
-    src="/images/iiif-annual-conference-2023/lmec/lmec-repo.png"
-  />
-</section>
-
-<section>
   <p>Converting Map Warper data to Georeference Annotations</p>
   <div class="flex flex-row w-full [&>*]:min-w-0">
     <img
@@ -644,25 +635,6 @@
       src="/images/iiif-annual-conference-2023/soduco/soduco-verniquet-rumsey.png"
     />
   </div>
-</section>
-
-<section>
-  <!-- https://github.com/soduco/allmaps_annotations -->
-  <p>From QGIS to Georeference Annotations</p>
-  <img
-    alt="Scripts to convert QGIS exports to Georeference Annotations"
-    src="/images/iiif-annual-conference-2023/soduco/soduco-scripts.png"
-  />
-</section>
-
-<section>
-  <!-- https://github.com/allmaps/allmaps/pull/20 -->
-  <p>Adding Image API 1.1 support for Gallica</p>
-  <!-- svelte-ignore a11y-img-redundant-alt -->
-  <img
-    alt="Pull request of Soduco researcher for Image API 1.1 support"
-    src="/images/iiif-annual-conference-2023/soduco/soduco-pr.png"
-  />
 </section>
 
 <section>

@@ -576,7 +576,7 @@
 
 <section>
   <!-- https://cartinal.leventhalmap.org/guides/georeferencing-with-allmaps.html -->
-  <p>LMEC Guide for Georeferencing Boston Atlasses</p>
+  <p>LMEC Guide for Georeferencing Boston Atlases</p>
   <video
     muted
     data-loop

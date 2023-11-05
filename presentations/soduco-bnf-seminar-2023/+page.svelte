@@ -115,7 +115,7 @@
 </svelte:head>
 
 <Title>
-  <h2 class="text-white">Georeferencing with Allmaps<br/>and IIIF</h2>
+  <h2 class="text-white">Georeferencing with Allmaps<br />and IIIF</h2>
   <p class="text-white r-fit-text">SODUCO-BNF seminar 2023</p>
 </Title>
 
@@ -148,7 +148,8 @@
 
 <section class="section-horizontal section-stretch">
   <p>
-    Allmaps is centred around the <strong>Georeference Extension</strong> published by the IIIF Consortium.
+    Allmaps is centered around the <strong>Georeference Extension</strong> published
+    by the IIIF Consortium.
   </p>
   <a href="https://iiif.io/news/2023/05/15/georef-extension-published/">
     <img
@@ -319,9 +320,12 @@
       and overlay IIIF maps in the browser, using WebGL
     </li>
     <li>
-      Integrate into your applications by using the plugins for <strong>OpenLayers</strong> and
-      <strong>Leaflet</strong>. Or use the proxy server for XYZ map tiles, or the Allmaps CLI
-      to generate GeoTIFFs
+      Integrate into your applications by using the plugins for <strong
+        >OpenLayers</strong
+      >
+      and
+      <strong>Leaflet</strong>. Or use the proxy server for XYZ map tiles, or
+      the Allmaps CLI to generate GeoTIFFs
     </li>
   </ol>
 </section>

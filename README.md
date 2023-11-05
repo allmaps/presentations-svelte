@@ -22,7 +22,7 @@ pnpm run dev
 
 ## Configuration
 
-[`src/app.css`](src/app.css) contains a few useful Tailwind presets and [utility patterns](https://tailwindcss.com/docs/reusing-styles#extracting-classes-with-apply).
+[`presentations/app.css`](presentations/app.css) contains a few useful Tailwind presets and [utility patterns](https://tailwindcss.com/docs/reusing-styles#extracting-classes-with-apply).
 
 To override a default styles of a `<section>`, you can use the following classes:
 

@@ -366,6 +366,42 @@
 </section>
 
 <section>
+  <!-- https://observablehq.com/@allmaps/kit-maps -->
+  <p>Thin Plate Spline Transformation</p>
+  <video
+    muted
+    data-loop
+    data-autoplay
+    data-src="/videos/soduco-bnf-seminar-2023/tps-metro-paris.mp4"
+  />
+</section>
+
+<section>
+  <p>Command Line Interface</p>
+  <pre class="bash">
+		<code data-trim data-noescape
+      ><script type="text/template">
+        ~ allmaps
+        Allmaps CLI
+
+        Usage: allmaps [options] [command]
+
+        Options:
+          -h, --help      display help for command
+
+        Commands:
+          annotation      parse and generate Georeference Annotations
+          transform       transform SVG to GeoJSON and vice versa
+          iiif            parse and generate IIIF resources
+          help [command]  display help for command
+
+        For more details about Allmaps, see https://allmaps.org
+      </script></code
+      >
+    </pre>
+  </section>
+
+<section>
   <!-- Plan de Paris avec indication exacte des Maisons et Monuments incendiées [sic], des Batteries et Barricades construites en Mai 1871 et numérotage des Bastions de l'Enceinte (1871) -->
   <!-- https://gallica.bnf.fr/ark:/12148/btv1b8494157x/f1.item.zoom -->
   <!-- https://annotations.allmaps.org/images/d1035e5f5d30a169 -->
@@ -392,17 +428,6 @@
 </section>
 
 <section>
-  <!-- https://observablehq.com/@allmaps/kit-maps -->
-  <p>Thin Plate Spline Transformation</p>
-  <video
-    muted
-    data-loop
-    data-autoplay
-    data-src="/videos/soduco-bnf-seminar-2023/tps-metro-paris.mp4"
-  />
-</section>
-
-<section>
   <!-- Daguerre's diorama in  Architectonographie des théâtres de Paris (1821) -->
   <!-- https://gallica.bnf.fr/ark:/12148/bpt6k1526013d -->
   <!-- https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1526013d/manifest.json -->
@@ -420,6 +445,61 @@
       alt="Viewing the plan of the diorama in the Allmaps Viewer"
       loading="lazy"
       src="/images/soduco-bnf-seminar-2023/diorama-viewer.png"
+    />
+  </div>
+</section>
+
+<section bind:this={sectionMapMonsters} class="gap-2 grid-cols-7 grid-rows-5">
+  <!-- TODO other monsters! -->
+  {#each Array(16) as _, i (`${i}-${mapMonsterCounter}`)}
+    <div class={mapMonstersClass} style:transform={randomTransform()}>
+      <MapMonster
+        mood={randomMood()}
+        color={randomColor()}
+        shape={Math.floor(randomFromInterval(0, 5))}
+      />
+    </div>
+  {/each}
+  <div class="col-span-3 row-span-1">
+    In the pipeline...
+  </div>
+
+  {#each Array(16) as _, i (`${i}-${mapMonsterCounter}`)}
+    <div class={mapMonstersClass} style:transform={randomTransform()}>
+      <MapMonster
+        mood={randomMood()}
+        color={randomColor()}
+        shape={Math.floor(randomFromInterval(0, 5))}
+      />
+    </div>
+  {/each}
+</section>
+
+<section>
+  <!-- https://soduco.github.io/about/ -->
+  <p>Distortion analysis</p>
+  <div
+    class="grid grid-cols-2 [&>*]:min-w-0 [&>*]:min-h-0 gap-4 items-center place-items-center"
+  >
+    <img
+      alt="Table of Parisian atlasses"
+      loading="lazy"
+      src="/images/soduco-bnf-seminar-2023/distortion/old_map_displacementVectors.png"
+    />
+    <img
+      alt="Sheet of atlas"
+      loading="lazy"
+      src="/images/soduco-bnf-seminar-2023/distortion/old_map_2Omega_scalebar.png"
+    />
+    <img
+      alt="Trade directory"
+      loading="lazy"
+      src="/images/soduco-bnf-seminar-2023/distortion/old_map_distortionGrid.png"
+    />
+    <img
+      alt="Comparison between trade directories"
+      loading="lazy"
+      src="/images/soduco-bnf-seminar-2023/distortion/old_map_log2sigma_scalebar.png"
     />
   </div>
 </section>

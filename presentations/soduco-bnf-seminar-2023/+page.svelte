@@ -508,6 +508,17 @@
   </div>
 </section>
 
+<section>
+  <!-- Student work of Geomatics students -->
+  <!-- Faculty of Architecture and the Built Environment, TU Delft -->
+  <p>Automatic georeferencing?</p>
+  <img
+    alt="Matching between different series of the TMK"
+    loading="lazy"
+    src="/images/soduco-bnf-seminar-2023/geor-student-work.png"
+  />
+</section>
+
 <section class="section-horizontal section-stretch section-no-logo">
   <div>
     <p>Thanks!</p>

@@ -370,7 +370,7 @@
 </section>
 
 <section>
-  <!-- https://observablehq.com/@allmaps/kit-maps -->
+  <!-- https://observablehq.com/d/0b57d3b587542794 -->
   <p>Thin Plate Spline Transformation</p>
   <video
     muted
@@ -437,7 +437,6 @@
   <!-- https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1526013d/manifest.json -->
   <!-- https://annotations.allmaps.org/images/0cd4ee5d84dc9c65 -->
   <!-- Atlas Verniquet used as reference map -->
-
   <p>Custom Reference Map</p>
   <div class="flex flex-row w-full [&>*]:min-w-0">
     <img
@@ -480,7 +479,6 @@
 </section>
 
 <section>
-  <!-- https://soduco.github.io/about/ -->
   <p>Distortion analysis</p>
   <div
     class="grid grid-cols-2 [&>*]:min-w-0 [&>*]:min-h-0 gap-4 items-center place-items-center"
@@ -511,6 +509,7 @@
 <section>
   <!-- Student work of Geomatics students -->
   <!-- Faculty of Architecture and the Built Environment, TU Delft -->
+  <!-- Map series of the Dutch National Archives -->
   <p>Automatic georeferencing?</p>
   <img
     alt="Matching between different series of the TMK"
@@ -527,7 +526,7 @@
       <a class="underline" href="https://github.com/allmaps"
         >github.com/allmaps</a
       >
-      for more details about Allmaps!
+      for more details about Allmaps
     </p>
   </div>
   <video

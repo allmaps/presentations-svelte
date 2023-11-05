@@ -326,329 +326,100 @@
   </ol>
 </section>
 
-<!-- Video showing two LMEC atlases:
-  - https://collections.leventhalmap.org/search/commonwealth:vx024b87m/manifest
-  - https://collections.leventhalmap.org/search/commonwealth:dj530101x/manifest
--->
+<section bind:this={sectionMapMonsters} class="gap-2 grid-cols-7 grid-rows-5">
+  <!-- TODO other monsters! -->
+  {#each Array(16) as _, i (`${i}-${mapMonsterCounter}`)}
+    <div class={mapMonstersClass} style:transform={randomTransform()}>
+      <MapMonster
+        mood={randomMood()}
+        color={randomColor()}
+        shape={Math.floor(randomFromInterval(0, 5))}
+      />
+    </div>
+  {/each}
+  <div class="col-span-3 row-span-1">
+    Some new features...
+  </div>
+
+  {#each Array(16) as _, i (`${i}-${mapMonsterCounter}`)}
+    <div class={mapMonstersClass} style:transform={randomTransform()}>
+      <MapMonster
+        mood={randomMood()}
+        color={randomColor()}
+        shape={Math.floor(randomFromInterval(0, 5))}
+      />
+    </div>
+  {/each}
+</section>
+
 <section>
+  <!-- https://observablehq.com/@allmaps/leaflet-plugin -->
+  <!-- Plan général de l'Exposition universelle de 1889 -->
+  <!-- https://archive.org/details/plangeneraldelex00unse -->
+  <!-- https://annotations.allmaps.org/images/7e491a36c6e3de09 -->
+  <p>Leaflet Plugin</p>
+  <img
+    alt="Map of LMEC"
+    loading="lazy"
+    src="/images/soduco-bnf-seminar-2023/leaflet-plugin.png"
+  />
+</section>
+
+<section>
+  <!-- Plan de Paris avec indication exacte des Maisons et Monuments incendiées [sic], des Batteries et Barricades construites en Mai 1871 et numérotage des Bastions de l'Enceinte (1871) -->
+  <!-- https://gallica.bnf.fr/ark:/12148/btv1b8494157x/f1.item.zoom -->
+  <!-- https://annotations.allmaps.org/images/d1035e5f5d30a169 -->
+  <p>Background Removal</p>
   <video
-    class="shadow-lg"
     muted
     data-loop
     data-autoplay
-    data-src="/video/iiif-annual-conference-2023/lmec-atlases.webm"
+    data-src="/videos/soduco-bnf-seminar-2023/barricades-background-removal.mp4"
   />
 </section>
 
 <section>
-  <a
-    href="https://dev.viewer.allmaps.org/?url=https%3A%2F%2Fpresentations.allmaps.org%2Fannotations%2Fiiif-annual-conference-2023%2Fpompeii.json"
-  >
-    <img
-      alt="Four maps of Pompeii, shown in Allmaps Viewer"
-      loading="lazy"
-      src="/images/iiif-annual-conference-2023/pompeii.jpg"
-    />
-  </a>
-</section>
-
-<section class="rainbow-background">
-  <a
-    href="https://dev.viewer.allmaps.org/?url=https%3A%2F%2Fpresentations.allmaps.org%2Fannotations%2Fiiif-annual-conference-2023%2Fpompeii.json"
-  >
-    <img
-      alt="Four maps of Pompeii, colorized with Allmaps Viewer"
-      loading="lazy"
-      src="/images/iiif-annual-conference-2023/pompeii-colorized.png"
-    />
-  </a>
-</section>
-
-<section>
-  <a href="https://latest.allmaps.org">
-    <img
-      alt="Allmaps Latest"
-      loading="lazy"
-      src="/images/iiif-annual-conference-2023/allmaps-latest.jpg"
-    />
-  </a>
-</section>
-
-<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- // Jules ////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-<section>
-  <!-- https://digitalcollections.universiteitleiden.nl/view/collection/kitmaps -->
-  <div>
-    <p>Leiden University Libraries</p>
-  </div>
-  <img
-    alt="Colonial Map collection at Leiden University Libraries"
-    loading="lazy"
-    src="/images/iiif-annual-conference-2023/ubl/ubl-kit-digital-collections.png"
-  />
-</section>
-
-<section>
-  <p>Spreadsheet with geospatial information about the KIT Collection</p>
-  <img
-    alt="Excel with geospatial information"
-    loading="lazy"
-    src="/images/iiif-annual-conference-2023/ubl/ubl-kit-original-excel.png"
+  <!-- Verniquet Atlas -->
+  <!-- https://soduco.geohistoricaldata.org/AllmapsAnnotations/ -->
+  <!-- https://dataverse.harvard.edu/api/access/datafile/7002730 -->
+  <p>Colorization</p>
+  <video
+    muted
+    data-loop
+    data-autoplay
+    data-src="/videos/soduco-bnf-seminar-2023/verniquet-colorize.mp4"
   />
 </section>
 
 <section>
   <!-- https://observablehq.com/@allmaps/kit-maps -->
-  <p>Preview of results in Allmaps</p>
+  <p>Thin Plate Spline Transformation</p>
   <video
     muted
     data-loop
     data-autoplay
-    data-src="/videos/iiif-annual-conference-2023/ubl-kit-screen-cap-results.mp4"
+    data-src="/videos/soduco-bnf-seminar-2023/tps-metro-paris.mp4"
   />
 </section>
 
 <section>
-  <!-- https://www.leventhalmap.org -->
-  <p>Leventhal Map & Education Center at the Boston Public Library (LMEC)</p>
-  <img
-    alt="Map of LMEC"
-    loading="lazy"
-    src="/images/iiif-annual-conference-2023/lmec/lmec-converted-example-landing-page.png"
-  />
-</section>
+  <!-- Daguerre's diorama in  Architectonographie des théâtres de Paris (1821) -->
+  <!-- https://gallica.bnf.fr/ark:/12148/bpt6k1526013d -->
+  <!-- https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1526013d/manifest.json -->
+  <!-- https://annotations.allmaps.org/images/0cd4ee5d84dc9c65 -->
+  <!-- Atlas Verniquet used as reference map -->
 
-<section>
-  <p>Converting Map Warper data to Georeference Annotations</p>
+  <p>Custom Reference Map</p>
   <div class="flex flex-row w-full [&>*]:min-w-0">
     <img
-      alt="LMEC map in Allmaps Editor"
+      alt="Georeferencing the plan of the diorama in the Allmaps Editor"
       loading="lazy"
-      src="/images/iiif-annual-conference-2023/lmec/lmec-converted-example-editor.png"
+      src="/images/soduco-bnf-seminar-2023/diorama-editor.png"
     />
     <img
-      alt="LMEC map in Allmaps Viewer"
+      alt="Viewing the plan of the diorama in the Allmaps Viewer"
       loading="lazy"
-      src="/images/iiif-annual-conference-2023/lmec/lmec-converted-example-viewer.png"
-    />
-  </div>
-</section>
-
-<section>
-  <!-- https://cartinal.leventhalmap.org/guides/georeferencing-with-allmaps.html -->
-  <p>LMEC Guide for Georeferencing Boston Atlases</p>
-  <video
-    muted
-    data-loop
-    data-autoplay
-    data-src="/videos/iiif-annual-conference-2023/lmec-guide-screen-cap.mp4"
-  />
-</section>
-
-<section>
-  <p>Using Allmaps CLI to generate GeoTIFFs for Atlascope</p>
-  <img
-    alt="Atlascopify script"
-    loading="lazy"
-    src="/images/iiif-annual-conference-2023/lmec/lmec-atlascopify-step2.gif"
-  />
-</section>
-
-<section>
-  <!-- https://www.atlascope.org -->
-  <p>Atlascope</p>
-  <img
-    alt="Atlascopify script"
-    loading="lazy"
-    src="/images/iiif-annual-conference-2023/lmec/lmec-atlascope.png"
-  />
-</section>
-
-<section>
-  <!-- https://soduco.github.io -->
-  <p>SODUCO research project</p>
-  <img
-    alt="Soduco's website"
-    loading="lazy"
-    src="/images/iiif-annual-conference-2023/soduco/soduco-website.png"
-  />
-</section>
-
-<section>
-  <!-- https://soduco.github.io/about/ -->
-  <p>Source material: municipal atlasses and trade directories</p>
-  <div
-    class="grid grid-cols-2 [&>*]:min-w-0 [&>*]:min-h-0 gap-4 items-center place-items-center"
-  >
-    <img
-      alt="Table of Parisian atlasses"
-      loading="lazy"
-      src="/images/iiif-annual-conference-2023/soduco/soduco-atlasses-table.jpg"
-    />
-    <img
-      alt="Sheet of atlas"
-      loading="lazy"
-      src="/images/iiif-annual-conference-2023/soduco/soduco-atlas.jpg"
-    />
-    <img
-      alt="Trade directory"
-      loading="lazy"
-      src="/images/iiif-annual-conference-2023/soduco/soduco-directories-single.jpg"
-    />
-    <img
-      alt="Comparison between trade directories"
-      loading="lazy"
-      src="/images/iiif-annual-conference-2023/soduco/soduco-directories-comparison.jpg"
-    />
-  </div>
-</section>
-
-<section>
-  <!-- https://soduco.github.io/AllmapsAnnotations/ -->
-  <p>Atlas Verniquet in Gallica and the David Rumsey Map Collection</p>
-  <div class="flex flex-row w-full [&>*]:min-w-0">
-    <img
-      alt="Atlas Verniquet in Gallica"
-      loading="lazy"
-      src="/images/iiif-annual-conference-2023/soduco/soduco-verniquet-gallica.png"
-    />
-    <img
-      alt="Atlas Verniquet in the David Rumsey Map Collection"
-      loading="lazy"
-      src="/images/iiif-annual-conference-2023/soduco/soduco-verniquet-rumsey.png"
-    />
-  </div>
-</section>
-
-<section>
-  <!-- https://soduco.github.io/AllmapsAnnotations/ -->
-  <div>
-    <p>Verniquet Atlas (1789-1799) in Allmaps</p>
-    <p class="font-light">David Rumsey Map Collection</p>
-  </div>
-  <video
-    muted
-    data-loop
-    data-autoplay
-    data-src="/videos/iiif-annual-conference-2023/soduco-verniquet-viewer-screen-capture.mp4"
-  />
-</section>
-
-<section>
-  <!-- https://soduco.github.io/AllmapsAnnotations/ -->
-  <p>Municipal Atlas (1888) in Allmaps</p>
-  <video
-    muted
-    data-loop
-    data-autoplay
-    data-src="/videos/iiif-annual-conference-2023/soduco-viewer-municipal-atlas.mp4"
-  />
-</section>
-
-<section>
-  <!-- https://icdar21-mapseg.github.io -->
-  <p>Generating masks with image segmentation</p>
-  <div class="flex flex-row w-full [&>*]:min-w-0">
-    <!-- svelte-ignore a11y-img-redundant-alt -->
-    <img
-      alt="Different types of image segmentation"
-      loading="lazy"
-      src="/images/iiif-annual-conference-2023/soduco/soduco-images-segmentation-1.jpg"
-    />
-    <img
-      alt="Vectorizing a map"
-      loading="lazy"
-      src="/images/iiif-annual-conference-2023/soduco/soduco-images-segmentation-2.jpg"
-    />
-  </div>
-</section>
-
-<section>
-  <!-- https://observablehq.com/@allmaps/allmaps-tile-server -->
-  <p>XYZ Tile Server for OpenHistoricalMap</p>
-  <video
-    muted
-    data-loop
-    data-autoplay
-    data-src="/videos/iiif-annual-conference-2023/ohm-xyz-screen-cap.mp4"
-  />
-</section>
-
-<section>
-  <!-- https://theberlage.nl -->
-  <p>
-    Collaboration with The Berlage Center for Advanced Studies in Architecture
-    and Urban Design
-  </p>
-  <img
-    alt="Mid term presentations"
-    loading="lazy"
-    src="/images/iiif-annual-conference-2023/berlage/berlage-photo-mid-term.jpg"
-  />
-</section>
-
-<section>
-  <!-- https://github.com/theberlage/river-maps -->
-  <p>Georeferencing Dutch river maps</p>
-  <img
-    alt="Georeferenced river maps in the Allmaps Viewer"
-    loading="lazy"
-    src="/images/iiif-annual-conference-2023/berlage/berlage-viewer-river-maps.png"
-  />
-</section>
-
-<section>
-  <!-- https://www.placemark.io -->
-  <p>Annotating in Placemark</p>
-  <img
-    alt="Annotations in Placemark"
-    loading="lazy"
-    src="/images/iiif-annual-conference-2023/berlage/berlage-placemark-annotations-chao.png"
-  />
-</section>
-
-<section>
-  <p>River Atlas <span class="font-light">- physical exhibition</span></p>
-  <img
-    alt="River Atlas exhibition"
-    loading="lazy"
-    src="/images/iiif-annual-conference-2023/berlage/berlage-exhibition-photo.jpg"
-  />
-</section>
-
-<section>
-  <!-- https://riveratlas.theberlage.nl -->
-  <p>River Atlas <span class="font-light">- website</span></p>
-  <video
-    muted
-    data-loop
-    data-autoplay
-    data-src="/videos/iiif-annual-conference-2023/berlage-river-atlas-screen-cap.mp4"
-  />
-</section>
-
-<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- // Bert & Jules /////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-<section>
-  <p>Feature preview: thin plate spline map warping</p>
-  <div class="flex flex-row w-full [&>*]:min-w-0 gap-12">
-    <img
-      alt="TPS map warping"
-      loading="lazy"
-      src="/images/iiif-annual-conference-2023/tps/lowercountries_tps.png"
-    />
-    <img
-      alt="TPS map warping with removed background"
-      loading="lazy"
-      src="/images/iiif-annual-conference-2023/tps/lowercountries_tps_removebackground.png"
+      src="/images/soduco-bnf-seminar-2023/diorama-viewer.png"
     />
   </div>
 </section>
@@ -676,12 +447,12 @@
   >
     <MapMonster mood="excited" color="purple">
       <div class="max-w-md p-4">
-        <p class="text-left">Scan this QR code to view this presentation:</p>
-        <a href="https://presentations.allmaps.org/iiif-annual-conference-2023">
+        <p class="text-left">This presentation:</p>
+        <a href="https://presentations.allmaps.org/soduco-bnf-seminar-2023">
           <img
             class="w-full"
             alt="QR code that links to these slides"
-            src="/images/iiif-annual-conference-2023/qr-code.svg"
+            src="/images/soduco-bnf-seminar-2023/qr-code.svg"
           /></a
         >
       </div>

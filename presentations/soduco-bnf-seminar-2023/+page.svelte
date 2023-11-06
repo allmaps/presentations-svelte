@@ -62,13 +62,15 @@
     return `scale(${scale}) rotate(${rotate}deg) translate(${translateX}px, ${translateY}px)`
   }
 
-  let mapMonsterInterval: number | undefined
+  let mapMonsterInterval1: number | undefined
+  let mapMonsterInterval2: number | undefined
   let mapMonsterCounter = 0
 
   const mapMonstersClass = 'w-28'
 
   let sectionThumbnails: HTMLElement
-  let sectionMapMonsters: HTMLElement
+  let sectionMapMonsters1: HTMLElement
+  let sectionMapMonsters2: HTMLElement
 
   let mapThumbnailInterval: number | undefined
   let shuffledMapThumbnails = shuffle(mapThumbnails)
@@ -90,16 +92,28 @@
       mapThumbnailInterval = undefined
     }
 
-    if (sectionMapMonsters === $currentSlide) {
-      if (!mapMonsterInterval) {
-        mapMonsterInterval = setInterval(() => {
+    if (sectionMapMonsters1 === $currentSlide) {
+      if (!mapMonsterInterval1) {
+        mapMonsterInterval1 = setInterval(() => {
           mapMonsterCounter++
         }, 1000)
       }
     } else {
       mapMonsterCounter = 0
-      clearInterval(mapMonsterInterval)
-      mapMonsterInterval = undefined
+      clearInterval(mapMonsterInterval1)
+      mapMonsterInterval1 = undefined
+    }
+
+    if (sectionMapMonsters2 === $currentSlide) {
+      if (!mapMonsterInterval2) {
+        mapMonsterInterval2 = setInterval(() => {
+          mapMonsterCounter++
+        }, 1000)
+      }
+    } else {
+      mapMonsterCounter = 0
+      clearInterval(mapMonsterInterval2)
+      mapMonsterInterval2 = undefined
     }
   }
 
@@ -161,7 +175,10 @@
 </section>
 
 <section>
-  <p>Georeference Annotation contains all the required data</p>
+  <p>
+    <strong>Georeference Annotation</strong>: a Web Annotation that contains all
+    <br /> the required data to georeference a IIIF image:
+  </p>
   <pre class="javascript">
 		<code data-line-numbers="1-115|17-23|24-28|39-50" data-trim data-noescape
       ><script type="text/template">
@@ -330,7 +347,7 @@
   </ol>
 </section>
 
-<section bind:this={sectionMapMonsters} class="gap-2 grid-cols-7 grid-rows-5">
+<section bind:this={sectionMapMonsters1} class="gap-2 grid-cols-7 grid-rows-5">
   <!-- TODO other monsters! -->
   {#each Array(16) as _, i (`${i}-${mapMonsterCounter}`)}
     <div class={mapMonstersClass} style:transform={randomTransform()}>
@@ -341,9 +358,7 @@
       />
     </div>
   {/each}
-  <div class="col-span-3 row-span-1">
-    Some new features...
-  </div>
+  <div class="col-span-3 row-span-1">Some new features:</div>
 
   {#each Array(16) as _, i (`${i}-${mapMonsterCounter}`)}
     <div class={mapMonstersClass} style:transform={randomTransform()}>
@@ -381,29 +396,13 @@
 </section>
 
 <section>
-  <p>Command Line Interface</p>
-  <pre class="bash">
-		<code data-trim data-noescape
-      ><script type="text/template">
-        ~ allmaps
-        Allmaps CLI
-
-        Usage: allmaps [options] [command]
-
-        Options:
-          -h, --help      display help for command
-
-        Commands:
-          annotation      parse and generate Georeference Annotations
-          transform       transform SVG to GeoJSON and vice versa
-          iiif            parse and generate IIIF resources
-          help [command]  display help for command
-
-        For more details about Allmaps, see https://allmaps.org
-      </script></code
-      >
-    </pre>
-  </section>
+  <p>Command Line Interface (CLI)</p>
+  <img
+    alt="Allmaps CLI"
+    loading="lazy"
+    src="/images/soduco-bnf-seminar-2023/allmaps-cli.png"
+  />
+</section>
 
 <section>
   <!-- Plan de Paris avec indication exacte des Maisons et Monuments incendiées [sic], des Batteries et Barricades construites en Mai 1871 et numérotage des Bastions de l'Enceinte (1871) -->
@@ -452,7 +451,7 @@
   </div>
 </section>
 
-<section bind:this={sectionMapMonsters} class="gap-2 grid-cols-7 grid-rows-5">
+<section bind:this={sectionMapMonsters2} class="gap-2 grid-cols-7 grid-rows-5">
   <!-- TODO other monsters! -->
   {#each Array(16) as _, i (`${i}-${mapMonsterCounter}`)}
     <div class={mapMonstersClass} style:transform={randomTransform()}>
@@ -463,9 +462,7 @@
       />
     </div>
   {/each}
-  <div class="col-span-3 row-span-1">
-    In the pipeline...
-  </div>
+  <div class="col-span-3 row-span-1">Future plans:</div>
 
   {#each Array(16) as _, i (`${i}-${mapMonsterCounter}`)}
     <div class={mapMonstersClass} style:transform={randomTransform()}>
@@ -510,7 +507,7 @@
   <!-- Student work of Geomatics students -->
   <!-- Faculty of Architecture and the Built Environment, TU Delft -->
   <!-- Map series of the Dutch National Archives -->
-  <p>Automatic georeferencing?</p>
+  <p>Automatic georeferencing</p>
   <img
     alt="Matching between different series of the TMK"
     loading="lazy"

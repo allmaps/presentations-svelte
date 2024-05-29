@@ -123,32 +123,105 @@
   </h3>
 </Title>
 
-<section class="section-horizontal section-stretch">
+<section class="section-stretch">
+  <img
+    alt="Maps on four IIIF Canvasses that can be turned into one singe map"
+    loading="lazy"
+    src="/images/iiif-annual-conference-2024/map-series-explainer.svg"
+  />
   <p>What do we mean by map series?</p>
 </section>
 
 <section class="section-horizontal section-stretch">
-  <p>Example: Road Atlas</p>
+  <!-- https://lccn.loc.gov/15015560 -->
+  <!-- https://www.loc.gov/item/15015560/manifest.json -->
+  <img
+    alt="MacAdam's road atlases at Library of Congress"
+    loading="lazy"
+    src="/images/iiif-annual-conference-2024/loc-road-atlas.png"
+  />
+  <div>
+    <p>Example: MacAdam's Road Atlas</p>
+    <i>Library of Congress</i>
+  </div>
+</section>
+
+<section class="section-stretch">
+  <!-- https://tile.loc.gov/image-services/iiif/public:gdcmassbookdig:macadamsroadatla00unse:macadamsroadatla00unse_0002/full/pct:100.0/270/default.jpg -->
+  <img
+    alt="Key map of MacAdam's Road Atlas"
+    loading="lazy"
+    src="/images/iiif-annual-conference-2024/loc-road-atlas-key-map.jpg"
+  />
+  <p>Index sheet or key map</p>
 </section>
 
 <section class="section-horizontal section-stretch">
-  <p>Option 1: Road Atlas on a canvas</p>
+  <img
+    alt="Boston sheets laid out on a canvas"
+    loading="lazy"
+    src="/images/iiif-annual-conference-2024/loc-road-atlas-boston-layout.svg"
+  />
+  <p>Option 1: Laying out sheets on a canvas</p>
 </section>
 
-<section class="section-horizontal section-stretch">
-  <p>Option 2: Road Atlas Georeferenced</p>
+<section>
+  <!-- https://www.loc.gov/item/15015560/manifest.json -->
+  <!-- https://annotations.allmaps.org/manifests/b4c1fb44d37fe502 -->
+  <div class="flex flex-row w-full [&>*]:min-w-0">
+    <img
+      alt="Single sheet in Allmaps Editor"
+      loading="lazy"
+      src="/images/iiif-annual-conference-2024/loc-road-map-allmaps-editor.png"
+    />
+    <img
+      alt="All sheets in Allmaps Viewer"
+      loading="lazy"
+      src="/images/iiif-annual-conference-2024/loc-road-map-allmaps-viewer.png"
+    />
+  </div>
+  <p>Option 2: Georeferencing using Allmaps</p>
 </section>
 
-<section class="section-horizontal section-stretch">
-  <p>Introduction Geomatics</p>
+<section class="section-stretch">
+  <img
+    alt="Geomatics students in the depot of the Dutch National Archives"
+    loading="lazy"
+    src="/images/iiif-annual-conference-2024/na-visit-depot.jpg"
+  />
+  <p>Can we automate this process?</p>
+  <i
+    >Visit to the depot of the National Archives with students of the Geomatics
+    Master of the Faculty of Architecture and the Built Environment</i
+  >
 </section>
 
-<section class="section-horizontal section-stretch">
-  <p>National Archives</p>
+<section class="section-stretch">
+  <!-- https://www.nationaalarchief.nl/sites/default/files/afbeeldingen/toegangen/bladwijzer-bonnebladen.jpg -->
+  <img
+    alt="Sheet index 19th century topographical map series"
+    loading="lazy"
+    src="/images/iiif-annual-conference-2024/na-bladwijzer-bonnebladen.jpg"
+  />
+  <p>Sheet index topographical map series</p>
 </section>
 
-<section class="section-horizontal section-stretch">
-  <p>National Archives</p>
+<section>
+  <!-- https://www.nationaalarchief.nl/onderzoeken/archief/4.TOPO/invnr/%40A~A7~A7.1 -->
+  <!-- https://www.nationaalarchief.nl/onderzoeken/archief/4.TOPO/invnr/10.107/file/NL-HaNA_4.TOPO_10.107_R -->
+  <div class="flex flex-row w-full [&>*]:min-w-0">
+    <img
+      alt="Inventory published by the National Archives"
+      loading="lazy"
+      src="/images/iiif-annual-conference-2024/na-topo4-inv.png"
+    />
+    <img
+      alt="Single sheet opened in Viewer"
+      loading="lazy"
+      src="/images/iiif-annual-conference-2024/na-topo4-sheet.png"
+    />
+  </div>
+  <p>Digitised, but still hard to access</p>
 </section>
 
 <section class="section-horizontal section-stretch">

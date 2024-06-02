@@ -185,25 +185,14 @@
 
 <section class="section-stretch">
   <img
-    alt="Geomatics students in the depot of the Dutch National Archives"
+    alt="Visit to the depot of the National Archives with students of the Geomatics Master of the Faculty of Architecture and the Built Environment"
     loading="lazy"
     src="/images/iiif-annual-conference-2024/na-visit-depot.jpg"
   />
-  <p>Can we automate this process?</p>
-  <i
-    >Visit to the depot of the National Archives with students of the Geomatics
-    Master of the Faculty of Architecture and the Built Environment</i
-  >
-</section>
-
-<section class="section-stretch">
-  <!-- https://www.nationaalarchief.nl/sites/default/files/afbeeldingen/toegangen/bladwijzer-bonnebladen.jpg -->
-  <img
-    alt="Sheet index 19th century topographical map series"
-    loading="lazy"
-    src="/images/iiif-annual-conference-2024/na-bladwijzer-bonnebladen.jpg"
-  />
-  <p>Sheet index topographical map series</p>
+  <p>
+    Can we automate this process?<br />Case study: Topographical Map series of
+    the Netherlands
+  </p>
 </section>
 
 <section>
@@ -221,30 +210,113 @@
       src="/images/iiif-annual-conference-2024/na-topo4-sheet.png"
     />
   </div>
-  <p>Digitised, but still hard to access</p>
+  <p>Thousands of sheets have been digitised, but are still hard to access</p>
 </section>
 
-<section class="section-horizontal section-stretch">
-  <p>Sheet index</p>
+<section class="section-stretch">
+  <!-- https://www.nationaalarchief.nl/sites/default/files/afbeeldingen/toegangen/bladwijzer-bonnebladen.jpg -->
+  <img
+    alt="Sheet index 19th century topographical map series"
+    loading="lazy"
+    src="/images/iiif-annual-conference-2024/na-bladwijzer-tmk.jpg"
+  />
+  <p>Sheet index topographical map series</p>
 </section>
 
-<section class="section-horizontal section-stretch">
+<section>
+  <!-- TMK Blad 25: Amsterdam -->
+  <!-- https://dlc.services/iiif-img/7/4/6587b0b3-3090-451b-973b-0f1f997c7101/full/1000,/0/default.jpg -->
+  <img
+    alt="TMK Sheet 25 (Amsterdam)"
+    loading="lazy"
+    src="/images/iiif-annual-conference-2024/tmk-sheet-25.jpg"
+  />
   <p>Corner coordinates</p>
 </section>
 
-<section class="section-horizontal section-stretch">
+<section>
+  <!-- TMK Blad 25: Amsterdam -->
+  <!-- https://dlc.services/iiif-img/7/4/6587b0b3-3090-451b-973b-0f1f997c7101/full/1000,/0/default.jpg -->
+  <div class="flex flex-row gap-8 [&>*]:min-w-0">
+    <img
+      alt="Upper left corner"
+      loading="lazy"
+      src="/images/iiif-annual-conference-2024/tmk-25-upper-left.jpg"
+    />
+    <img
+      alt="Upper right corner"
+      loading="lazy"
+      src="/images/iiif-annual-conference-2024/tmk-25-upper-right.jpg"
+    />
+  </div>
+  <div class="flex flex-row gap-8 [&>*]:min-w-0">
+    <img
+      alt="Lower left corner"
+      loading="lazy"
+      src="/images/iiif-annual-conference-2024/tmk-25-lower-left.jpg"
+    />
+    <img
+      alt="Lower right corner"
+      loading="lazy"
+      src="/images/iiif-annual-conference-2024/tmk-25-lower-right.jpg"
+    />
+  </div>
+  <p>Corner coordinates</p>
+</section>
+
+<section>
+  <!-- Jochem Lesparre - Approximate transformation of geographic coordinates from Krayenhoff’s triangulation and coordinates in the Bonne projection used for historic map series of the Netherlands (2023)-->
+  <img
+    alt="PROJ Pipeline for converting Bonne coordinates to WGS84"
+    loading="lazy"
+    src="/images/iiif-annual-conference-2024/geomatics-coord-conversion-crop.jpg"
+  />
   <p>Converting coordinates</p>
 </section>
 
-<section class="section-horizontal section-stretch">
+<section>
+  <img
+    alt="PROJ Pipeline for converting Bonne coordinates to WGS84"
+    loading="lazy"
+    src="/images/iiif-annual-conference-2024/tmk-25-geojson.png"
+  />
   <p>GeoJSON output</p>
 </section>
 
-<section class="section-horizontal section-stretch">
+<section class="section-stretch">
+  <!-- https://www.nationaalarchief.nl/sites/default/files/afbeeldingen/toegangen/bladwijzer-bonnebladen.jpg -->
+  <img
+    alt="Sheet index 19th century topographical map series"
+    loading="lazy"
+    src="/images/iiif-annual-conference-2024/geomatics-sheet-index-2.svg"
+  />
+  <p>Other series use the same projection</p>
+</section>
+
+<section>
+  <!-- TMK Blad 25: Amsterdam -->
+  <!-- https://dlc.services/iiif-img/7/4/6587b0b3-3090-451b-973b-0f1f997c7101/full/1000,/0/default.jpg -->
+  <img
+    alt="Results of corner recognition algorithm"
+    loading="lazy"
+    src="/images/iiif-annual-conference-2024/geomatics-tmk-25-corner-recognition.svg"
+  />
   <p>Recognizing corners</p>
 </section>
 
-<section class="section-horizontal section-stretch">
+<section>
+  <div class="flex flex-row gap-8 [&>*]:min-w-0">
+    <img
+      alt="Results in Allmaps Viewer"
+      loading="lazy"
+      src="/images/iiif-annual-conference-2024/tmk-results.png"
+    />
+    <img
+      alt="Results in Allmaps Viewer"
+      loading="lazy"
+      src="/images/iiif-annual-conference-2024/bonnebladen-results.png"
+    />
+  </div>
   <p>Results</p>
 </section>
 
@@ -252,8 +324,23 @@
   <p>Extensions to the extension</p>
 </section>
 
-<section class="section-horizontal section-stretch">
-  <p>Reproducibility</p>
+<section>
+  <img
+    alt="Comment Glen Robson on Github"
+    loading="lazy"
+    src="/images/iiif-annual-conference-2024/north-korea-comment-glen.png"
+  />
+  <p>Does it work for other map series?</p>
+</section>
+
+<section>
+  <!-- https://viewer.allmaps.org/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbmmeijers%2Fiiif-annotations%2Fmain%2Fseries%2Fnorth_korea%2Fnorth_korea_annotation_page.json -->
+  <img
+    alt="Comment Glen Robson on Github"
+    loading="lazy"
+    src="/images/iiif-annual-conference-2024/north-korea-allmaps-viewer.png"
+  />
+  <p>308 maps of North Korea</p>
 </section>
 
 <section class="section-horizontal section-stretch">

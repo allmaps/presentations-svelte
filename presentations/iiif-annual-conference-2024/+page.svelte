@@ -127,6 +127,7 @@
   <p>What do we mean by map series?</p>
   <img
     alt="Maps on four IIIF Canvasses that can be turned into one singe map"
+    class="pb-20"
     loading="lazy"
     src="/images/iiif-annual-conference-2024/map-series-explainer.svg"
   />
@@ -204,7 +205,7 @@
   <!-- https://www.nationaalarchief.nl/onderzoeken/archief/4.TOPO/invnr/%40A~A7~A7.1 -->
   <!-- https://www.nationaalarchief.nl/onderzoeken/archief/4.TOPO/invnr/10.107/file/NL-HaNA_4.TOPO_10.107_R -->
   <p>Thousands of sheets, but hard to access</p>
-  <div class="flex flex-row w-full [&>*]:min-w-0">
+  <div class="flex flex-row h-full [&>*]:min-w-0">
     <img
       alt="Inventory published by the National Archives"
       loading="lazy"
@@ -346,7 +347,7 @@
   />
 </section>
 
-<section>
+<section class="section-no-logo">
   <!-- https://viewer.allmaps.org/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbmmeijers%2Fiiif-annotations%2Fmain%2Fseries%2Fnorth_korea%2Fnorth_korea_annotation_page.json -->
   <p>
     308 maps of North Korea
@@ -357,6 +358,21 @@
     loading="lazy"
     src="/images/iiif-annual-conference-2024/north-korea-allmaps-viewer.png"
   />
+  <div
+    class="fragment absolute bottom-0 right-0 w-1/2 h-full text-left text-2xl bg-white/0 flex items-end px-24 py-12"
+  >
+    <MapMonster mood="happy" color="green">
+      <div class="max-w-md p-4">
+        <p>
+          <span class="font-light">Students</span> Eirini Tsipa, Giorgos
+          Iliopoulos, Oliver Post & Rianne Aalders
+          <span class="font-light">Tutors</span>
+          Martijn Meijers, Edward Verbree.
+          <span class="font-light">Thanks to</span> Jochem Lesparre, Gijs Boink
+        </p>
+      </div>
+    </MapMonster>
+  </div>
 </section>
 
 <!-- ===================================================================================== -->

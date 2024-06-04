@@ -385,8 +385,8 @@
 
 <section>
   <p>
-    The core functionality of Allmaps is converting <br /> pixel coordinates to geospatial
-    coordinates.
+    The core functionality of Allmaps is converting <br /> pixel coordinates to
+    geospatial coordinates <br />(and vice versa).
   </p>
   <pre class="javascript">
 		<code data-line-numbers="" data-trim data-noescape
@@ -416,13 +416,34 @@
   />
 </section>
 
-<section>
-  What else can we do with this?
-  <!-- met monstertjes! -->
+<section bind:this={sectionMapMonsters} class="gap-2 grid-cols-7 grid-rows-5">
+  {#each Array(9) as _, i (`${i}-${mapMonsterCounter}`)}
+    <div class={mapMonstersClass} style:transform={randomTransform()}>
+      <MapMonster
+        mood={randomMood()}
+        color={randomColor()}
+        shape={Math.floor(randomFromInterval(0, 5))}
+      />
+    </div>
+  {/each}
+  <div class="col-span-3 row-span-2 place-self-center">
+    Converting pixel coordinates to geospatial coordinates:
+    <br /><strong>What else can we do with this?</strong>
+  </div>
+
+  {#each Array(20) as _, i (`${i}-${mapMonsterCounter}`)}
+    <div class={mapMonstersClass} style:transform={randomTransform()}>
+      <MapMonster
+        mood={randomMood()}
+        color={randomColor()}
+        shape={Math.floor(randomFromInterval(0, 5))}
+      />
+    </div>
+  {/each}
 </section>
 
 <section>
-  <p>Allmaps Annotations API now supports GeoJSON</p>
+  <p>Allmaps Annotation API now supports GeoJSON</p>
   <code class="text-2xl"
     >https://annotations.allmaps.org/manifests/23379602e8187445.geojson</code
   >
@@ -441,7 +462,7 @@
 </section>
 
 <section>
-  <p>Allmaps Annotations API now supports geospatial queries</p>
+  <p>Allmaps Annotation API now supports geospatial queries</p>
   <code class="text-2xl"
     >https://annotations.allmaps.org/maps?intersects=34.06242,-118.44740</code
   >
@@ -454,30 +475,86 @@
 
 <section>
   <p>Visualizing all georeferenced maps with vector tiles and Protomaps</p>
-  <!-- Screen capture Explore -->
+
+  <video
+    class="shadow-lg"
+    muted
+    data-loop
+    data-autoplay
+    data-src="/videos/iiif-annual-conference-2024/allmaps-explore.webm"
+  />
 </section>
 
-<section class="section-horizontal section-stretch">
-  <p>Allmaps Arcade</p>
-  <!-- screen capture -->
+<section class="section-stretch">
+  <video
+    class="shadow-lg"
+    muted
+    data-loop
+    data-autoplay
+    data-src="/videos/iiif-annual-conference-2024/allmaps-arcade.webm"
+  />
+</section>
+
+<section class="section-stretch">
+  <p>
+    Play Allmaps Arcade on <a
+      class="underline"
+      href="https://arcade.allmaps.org">arcade.allmaps.org</a
+    >
+  </p>
 </section>
 
 <section>
-  <p>Allmaps Arcade cabinet</p>
+  <p>Or come to Delft!</p>
 
   <div class="flex flex-row gap-8 [&>*]:min-w-0">
     <img
-      alt="Allmaps Arcade cabinet, photo 2"
+      alt="Allmaps Arcade cabinet #2"
       loading="lazy"
       src="/images/iiif-annual-conference-2024/arcade-cabinet-2.jpg"
     />
     <img
-      alt="Allmaps Arcade cabinet, photo 1"
+      alt="Allmaps Arcade cabinet #1"
       loading="lazy"
       src="/images/iiif-annual-conference-2024/arcade-cabinet-1.jpg"
     />
   </div>
 </section>
 
-<!-- homepage -->
-<!-- Open data on allmaps.org  -->
+<section
+  class="section-horizontal section-stretch section-no-logo grid-cols-[1fr_60%]"
+>
+  <div>
+    <p>
+      New open data section on <a class="underline" href="https://allmaps.org"
+        >allmaps.org</a
+      >!
+    </p>
+  </div>
+  <video
+    class="shadow-lg"
+    muted
+    data-loop
+    data-autoplay
+    data-src="/videos/iiif-annual-conference-2024/open-data-homepage.webm"
+  />
+
+  <div
+    class="fragment absolute bottom-0 right-0 w-[60%] h-full text-left bg-white/70 flex items-end px-24 py-12"
+  >
+    <MapMonster mood="excited" color="pink">
+      <div class="max-w-md p-4">
+        <p class="text-left">
+          Thanks! Scan this QR code to view this presentation:
+        </p>
+        <a href="https://presentations.allmaps.org/iiif-annual-conference-2024">
+          <img
+            class="w-full"
+            alt="QR code that links to these slides"
+            src="/images/iiif-annual-conference-2024/qr-code.svg"
+          /></a
+        >
+      </div>
+    </MapMonster>
+  </div>
+</section>

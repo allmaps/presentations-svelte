@@ -386,7 +386,7 @@
 <section>
   <p>
     The core functionality of Allmaps is converting <br /> pixel coordinates to
-    geospatial coordinates <br />(and vice versa).
+    geospatial coordinates <br />(and vice versa)
   </p>
   <pre class="javascript">
 		<code data-line-numbers="" data-trim data-noescape
@@ -540,7 +540,7 @@
   />
 
   <div
-    class="fragment absolute bottom-0 right-0 w-[60%] h-full text-left bg-white/70 flex items-end px-24 py-12"
+    class="fragment absolute bottom-0 right-0 w-[60%] h-full text-left bg-white/70 flex items-end px-24 py-12 drop-shadow-md"
   >
     <MapMonster mood="excited" color="pink">
       <div class="max-w-md p-4">

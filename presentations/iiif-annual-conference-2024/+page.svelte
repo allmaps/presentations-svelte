@@ -359,18 +359,107 @@
   />
 </section>
 
-<section class="section-horizontal section-stretch">
-  <p>Distortion analysis</p>
+<!-- ===================================================================================== -->
+<!-- ===================================================================================== -->
+<!-- == Bert ============================================================================= -->
+<!-- ===================================================================================== -->
+<!-- ===================================================================================== -->
+
+<section>
+  <p>
+    The core functionality of Allmaps is converting <br /> pixel coordinates to geospatial
+    coordinates.
+  </p>
+  <pre class="javascript">
+		<code data-line-numbers="" data-trim data-noescape
+      ><script type="text/template">
+        import { parseAnnotation } from '@allmaps/annotation'
+        import { GcpTransformer } from '@allmaps/transformer'
+
+        const annotationUrl =
+          'https://annotations.allmaps.org/maps/b3d87d457a7a5603'
+        const response = await fetch(annotationUrl)
+        const annotation = await response.json()
+
+        const maps = parseAnnotation(annotation)
+        const transformer = new GcpTransformer(maps[0].gcps)
+
+        const coordinates = transformer.transformToGeo([100, 100])
+      </script></code
+    ></pre>
 </section>
 
-<section class="section-horizontal section-stretch">
-  <p>API updates</p>
+<section class="section-stretch">
+  <iframe
+    title="Side by side"
+    class="w-full h-full"
+    data-src="https://cursor.allmaps.org"
+    data-preload
+  />
 </section>
 
-<section class="section-horizontal section-stretch">
-  <p>Discovering maps: Allmaps Explore / Allmaps Here</p>
+<section>
+  What else can we do with this?
+  <!-- met monstertjes! -->
+</section>
+
+<section>
+  <p>Allmaps Annotations API now supports GeoJSON</p>
+  <code class="text-2xl"
+    >https://annotations.allmaps.org/manifests/23379602e8187445.geojson</code
+  >
+  <div class="flex flex-row gap-8 [&>*]:min-w-0">
+    <img
+      alt="Atlas of the city of Lynn in Allmaps Viewer"
+      loading="lazy"
+      src="/images/iiif-annual-conference-2024/lynn-viewer.png"
+    />
+    <img
+      alt="Masks of Atlas of the city of Lynn in QGIS"
+      loading="lazy"
+      src="/images/iiif-annual-conference-2024/lynn-qgis.png"
+    />
+  </div>
+</section>
+
+<section>
+  <p>Allmaps Annotations API now supports geospatial queries</p>
+  <code class="text-2xl"
+    >https://annotations.allmaps.org/maps?intersects=34.06242,-118.44740</code
+  >
+  <img
+    alt="Allmaps Here"
+    loading="lazy"
+    src="/images/iiif-annual-conference-2024/allmaps-here.png"
+  />
+</section>
+
+<section>
+  <p>Visualizing all georeferenced maps with vector tiles and Protomaps</p>
+  <!-- Screen capture Explore -->
 </section>
 
 <section class="section-horizontal section-stretch">
   <p>Allmaps Arcade</p>
+  <!-- screen capture -->
 </section>
+
+<section>
+  <p>Allmaps Arcade cabinet</p>
+
+  <div class="flex flex-row gap-8 [&>*]:min-w-0">
+    <img
+      alt="Allmaps Arcade cabinet, photo 2"
+      loading="lazy"
+      src="/images/iiif-annual-conference-2024/arcade-cabinet-2.jpg"
+    />
+    <img
+      alt="Allmaps Arcade cabinet, photo 1"
+      loading="lazy"
+      src="/images/iiif-annual-conference-2024/arcade-cabinet-1.jpg"
+    />
+  </div>
+</section>
+
+<!-- homepage -->
+<!-- Open data on allmaps.org  -->

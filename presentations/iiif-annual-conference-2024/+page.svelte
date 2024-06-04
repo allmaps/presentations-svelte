@@ -306,7 +306,18 @@
   <img
     alt="Results of corner recognition algorithm"
     loading="lazy"
-    src="/images/iiif-annual-conference-2024/geomatics-tmk-25-corner-recognition.svg"
+    src="/images/iiif-annual-conference-2024/geomatics-tmk-25-corner-recognition-img-embedded.svg"
+  />
+</section>
+
+<section>
+  <!-- Waterstaatskaart Blad 48 -->
+  <!-- https://dlc.services/iiif-img/7/32/9976e341-14b7-492c-957e-b72251c441e3/full/4096,/0/default.jpg -->
+  <p>Also for irregular sheets</p>
+  <img
+    alt="Results of corner recognition algorithm"
+    loading="lazy"
+    src="/images/iiif-annual-conference-2024/geomatics-wsk-48-corner-recognition-img-embedded.svg"
   />
 </section>
 
@@ -338,7 +349,7 @@
 <section>
   <!-- https://viewer.allmaps.org/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbmmeijers%2Fiiif-annotations%2Fmain%2Fseries%2Fnorth_korea%2Fnorth_korea_annotation_page.json -->
   <p>
-    308 maps of North Korea<br />
+    308 maps of North Korea
     <span class="font-light">Stanford University Libraries</span>
   </p>
   <img

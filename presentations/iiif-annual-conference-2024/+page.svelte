@@ -353,10 +353,12 @@
     308 maps of North Korea
     <span class="font-light">Stanford University Libraries</span>
   </p>
-  <img
-    alt="Comment Glen Robson on Github"
-    loading="lazy"
-    src="/images/iiif-annual-conference-2024/north-korea-allmaps-viewer.png"
+  <video
+    class="shadow-lg"
+    muted
+    data-loop
+    data-autoplay
+    data-src="/videos/iiif-annual-conference-2024/stanford-north-korea-maps.mp4"
   />
   <div
     class="fragment absolute bottom-0 right-0 w-1/2 h-full text-left text-2xl bg-white/0 flex items-end px-24 py-12"

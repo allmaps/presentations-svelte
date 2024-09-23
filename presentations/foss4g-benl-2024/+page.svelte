@@ -684,6 +684,22 @@
     frameborder="0"
     src="https://observablehq.com/embed/4a7b34984b3bd4b8@1021?cell=*"
   ></iframe>
+  <div
+    class="fragment absolute bottom-0 right-0 w-1/2 h-full text-left flex items-end px-24 py-12 z-10"
+  >
+    <MapMonster mood="excited" color="purple">
+      <div class="max-w-md p-4">
+        <p class="text-left">This notebook:</p>
+        <a href="https://observablehq.com/d/4a7b34984b3bd4b8">
+          <img
+            class="w-96"
+            alt="QR code that links to this notebook"
+            src="/images/foss4g-benl-2024/qr-code-notebook.svg"
+          /></a
+        >
+      </div>
+    </MapMonster>
+  </div>
 </section>
 
 <!-- <section class="section-stretch">
@@ -731,11 +747,11 @@
     <MapMonster mood="excited" color="purple">
       <div class="max-w-md p-4">
         <p class="text-left">This presentation:</p>
-        <a href="https://presentations.allmaps.org/soduco-bnf-seminar-2023">
+        <a href="https://presentations.allmaps.org/foss4g-benl-2024">
           <img
-            class="w-full"
+            class="w-96"
             alt="QR code that links to these slides"
-            src="/images/soduco-bnf-seminar-2023/qr-code.svg"
+            src="/images/foss4g-benl-2024/qr-code.svg"
           /></a
         >
       </div>

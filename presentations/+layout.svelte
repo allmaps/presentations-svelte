@@ -9,7 +9,8 @@
 
   import '@allmaps/ui/css/fonts.css'
   import 'reveal.js/dist/reveal.css'
-  import 'reveal.js/plugin/highlight/monokai.css'
+  // import 'reveal.js/plugin/highlight/monokai.css'
+  import '$lib/highlight-styles/atom-one-light.css'
 
   import './theme.css'
   import './app.css'

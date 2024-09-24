@@ -191,7 +191,7 @@
     muted
     data-loop
     data-autoplay
-    data-src="/video/iiif-annual-conference-2023/georeferencing-loc-venice.webm"
+    data-src="/videos/iiif-annual-conference-2023/georeferencing-loc-venice.webm"
   />
 </section>
 
@@ -404,7 +404,7 @@
       Allmaps OpenLayers <br />Allmaps Leaflet<br />Allmaps MapLibre
     </div>
     <div class="fragment col-span-4" data-fragment-index="3">
-      Plugin to a webmap
+      Plugin to webmap
     </div>
     <div class="fragment col-span-2 font-bold" data-fragment-index="4">
       Allmaps Tile Server

@@ -156,7 +156,7 @@
     muted
     data-loop
     data-autoplay
-    data-src="/video/iiif-annual-conference-2023/georeferencing-loc-venice.webm"
+    data-src="/videos/iiif-annual-conference-2023/georeferencing-loc-venice.webm"
   />
 </section>
 

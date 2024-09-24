@@ -486,30 +486,6 @@
   <!-- https://dev.viewer.allmaps.org/?url=https%3A%2F%2Fannotations.allmaps.org%2Fimages%2F5afc515e4d10fd95 -->
 </section>
 
-<section class="section-horizontal section-stretch">
-  <!--
-  Mention:
-  - Reuse single source => Metadata conserved, No unnecessary copies
-  - Warp on device => Much faster process, Improvable georeferening
-  - Open data stays open => Derivates of open images stay accessible, Reusable GCP data (e.g. distortions, transform)
-  - FOSS tools you can host => Github, No vendor lock-in
-  -->
-  <img
-    alt="Allmaps API Containedby"
-    loading="lazy"
-    src="/images/foss4g-benl-2024/open_data.png"
-  />
-  <div class="space-y-10">
-    <h4>Principles</h4>
-    <div class="space-y-4 text-3xl">
-      <p>Reuse single source</p>
-      <p>Warp on device</p>
-      <p>Open data stays open</p>
-      <p>FOSS tools you can host</p>
-    </div>
-  </div>
-</section>
-
 <section bind:this={sectionMapMonsters1} class="gap-2 grid-cols-7 grid-rows-5">
   <!-- TODO other monsters! -->
   {#each Array(16) as _, i (`${i}-${mapMonsterCounter}`)}
@@ -578,60 +554,7 @@
 </section>
 
 <section>
-  <!-- <div class="space-y-10">
-    <h4>Under the hood</h4>
-    <ol class="space-y-6 text-3xl"> -->
-  <p>Open Source TS packages</p>
-  <div class="space-y-6 text-3xl">
-    <p>Allmaps' building blocks you can use</p>
-    <p></p>
-  </div>
-  <pre class="javascript">
-		<code data-line-numbers="" data-trim data-noescape
-      ><script type="text/template">
-        import { parseAnnotation } from '@allmaps/annotation'
-        import { GcpTransformer } from '@allmaps/transform'
-
-        const annotationUrl =
-          'https://annotations.allmaps.org/images/e861bd9af6573765'
-        const annotation = await fetch(annotationUrl).then((response) =>
-          response.json()
-        )
-        const maps = parseAnnotation(annotation)
-
-        const transformer = new GcpTransformer(maps[0].gcps)
-
-        const coordinates = transformer.transformToGeo([100, 100])
-      </script></code
-    ></pre>
-  <div class="space-y-6 text-3xl">
-    <p>
-      Example: Transform geometries <code>image↔︎geo</code> with
-      <code>@allmaps/transform</code>
-    </p>
-  </div>
-</section>
-
-<section>
-  <p>Command Line Interface (CLI)</p>
-  <div class="space-y-6 text-3xl">
-    <p>Make use of Georeference Annotations</p>
-    <p></p>
-  </div>
-  <img
-    alt="Allmaps CLI"
-    loading="lazy"
-    src="/images/foss4g-benl-2024/cli-transform.png"
-  />
-  <div class="space-y-6 text-3xl">
-    <p>
-      Example: Transform points <code>image↔︎geo</code>
-    </p>
-  </div>
-</section>
-
-<section>
-  <p>Working towards an explorable database</p>
+  <p>Towards an explorable database</p>
 
   <video
     class="shadow-lg"
@@ -651,6 +574,79 @@
     src="/images/foss4g-benl-2024/api-containedby.png"
   />
 </section> -->
+
+<section class="section-horizontal section-stretch">
+  <!--
+  Mention:
+  - Reuse single source => Metadata conserved, Derivates of open images stay accessible
+  - Warp on device => Much faster process, Improvable georeferening
+  - Open data stays open => Reusable GCP data (e.g. distortions, transform), Acces via (API or) download dump
+  - FOSS tools you can host => Packages you can use, No vendor lock-in
+  -->
+  <img
+    alt="Allmaps API Containedby"
+    loading="lazy"
+    src="/images/foss4g-benl-2024/open_data.png"
+  />
+  <div class="space-y-10">
+    <h4>Principles</h4>
+    <div class="space-y-4 text-3xl">
+      <p>Reuse single source</p>
+      <p>Warp on device</p>
+      <p>Open data stays open</p>
+      <p>FOSS tools you can host</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <!-- <div class="space-y-10">
+    <h4>Under the hood</h4>
+    <ol class="space-y-6 text-3xl"> -->
+  <div class="mb-12">
+    <p>Use Allmaps' building blocks in your project</p>
+  </div>
+  <pre class="javascript">
+      <code data-line-numbers="" data-trim data-noescape
+      ><script type="text/template">
+        import { parseAnnotation } from '@allmaps/annotation'
+        import { GcpTransformer } from '@allmaps/transform'
+
+        const annotationUrl =
+          'https://annotations.allmaps.org/images/e861bd9af6573765'
+        const annotation = await fetch(annotationUrl).then((response) =>
+          response.json()
+        )
+        const maps = parseAnnotation(annotation)
+
+        const transformer = new GcpTransformer(maps[0].gcps)
+
+        const coordinates = transformer.transformToGeo([100, 100])
+      </script></code
+    ></pre>
+  <div class="space-y-6 mt-12 text-3xl text-gray-500">
+    <p>
+      Transform geometries in TypeScript <br />
+      using <code>@allmaps/transform</code>
+    </p>
+  </div>
+</section>
+
+<section>
+  <!-- Generate bash scripts to create geotiffs -->
+  <p>Allmaps CLI as an alternative to GDAL</p>
+  <img
+    alt="Allmaps CLI"
+    loading="lazy"
+    src="/images/foss4g-benl-2024/cli-transform.png"
+  />
+  <div class="space-y-6 text-3xl text-gray-500">
+    <p>
+      Transform coordinates <br />
+      similar to <code>gdaltransform</code>
+    </p>
+  </div>
+</section>
 
 <section bind:this={sectionMapMonsters1} class="gap-2 grid-cols-7 grid-rows-5">
   <!-- TODO other monsters! -->
@@ -676,21 +672,32 @@
   {/each}
 </section>
 
-<section class="section-stretch">
+<section class="">
+  <p>Georeferencing 1832 cadaster maps of Baarle</p>
+  <iframe
+    title="Baarle in Editor"
+    class="h-[80vh]"
+    frameborder="0"
+    src="https://editor.allmaps.org/#/collection?url=https://sammeltassen.nl/iiif-manifests/rce/minuutplan-baarle@v2.json"
+  ></iframe>
+</section>
+
+<section class="">
+  <!-- Entire notebook: https://observablehq.com/embed/@allmaps/baarle@1230?cell=* -->
+  <p>Understanding the border's quirks</p>
   <iframe
     title="Observable notebook Baarle"
-    width="100%"
-    height="500"
+    class="h-[80vh]"
     frameborder="0"
-    src="https://observablehq.com/embed/4a7b34984b3bd4b8@1021?cell=*"
+    src="https://observablehq.com/embed/@allmaps/baarle@1230?cells=viewof+selectedEnclave%2Ccontainer%2Cviewof+opacity%2Cviewof+saturation%2Cviewof+threshold%2Cviewof+hardness%2Cviewof+hexColor%2Cviewof+colorize%2Cviewof+colorizeHexColor"
   ></iframe>
   <div
     class="fragment absolute bottom-0 right-0 w-1/2 h-full text-left flex items-end px-24 py-12 z-10"
   >
     <MapMonster mood="excited" color="purple">
       <div class="max-w-md p-4">
-        <p class="text-left">This notebook:</p>
-        <a href="https://observablehq.com/d/4a7b34984b3bd4b8">
+        <p class="text-left text-3xl">Explore this notebook:</p>
+        <a href="https://observablehq.com/embed/@allmaps/baarle">
           <img
             class="w-96"
             alt="QR code that links to this notebook"

@@ -132,12 +132,13 @@
 </svelte:head>
 
 <Title>
-  <h2 class="text-white">Allmaps</h2>
+  <!-- Defined white style because tailwind class text-white is overwritten by reveal -->
+  <h2 class="text-white" style="color: white">Allmaps</h2>
   <p class="text-white r-fit-text">FOSS4G BE+NL 2024</p>
 </Title>
 
 <Title dark={false}>
-  <h1>Allmaps</h1>
+  <h2>Allmaps</h2>
   <p>Open source tools for curating, georeferencing and exploring IIIF maps</p>
   <div
     class="fragment absolute top-0 left-0 w-full h-full bg-white/70 text-left text-4xl"
@@ -171,13 +172,15 @@
       <MapMonster mood="happy" color="pink">
         <ul class="px-12 py-4 max-w-xl space-y-8">
           <li>
-            <strong>Open standards</strong> for sharing images and metadata.
+            <strong>Open standards</strong> for sharing images and metadata
           </li>
-          <li>Used by <strong>archives</strong>, libraries and museums.</li>
+          <li>Used by <strong>archives</strong>, libraries and museums</li>
           <li>
-            Serving high resolution images using <strong
-              >tiles and zoomlevels</strong
-            >.
+            Images of paintings, books, ... and <strong>maps</strong>!
+          </li>
+          <li>
+            Serving high resolution images using <strong>tiles</strong> in
+            different <strong>zoom levels</strong>
           </li>
         </ul>
       </MapMonster>
@@ -326,7 +329,8 @@
     <div class="flex items-end h-full px-24 py-12">
       <MapMonster mood="happy" color="purple">
         <p class="p-4">
-          Annotations can be stored <strong>locally or on a url</strong>:
+          These annotations can be stored <strong>locally</strong> or served by
+          a <strong>URL</strong>:
         </p>
         <p class="p-4">
           <code class="text-2xl"
@@ -382,6 +386,7 @@
   Mention: compare with current toolchain:
   - You can currently georeference in QGIS
   - Steps of downloading and rehosting are omitted
+  - Every app does something with Georeference Annotations: 'create, view, plugin, add, use'
   -->
   <p class="p-8">
     <strong>Allmaps is a toolbox</strong> <br />for working with Georeference
@@ -392,31 +397,33 @@
       Allmaps Editor
     </div>
     <div class="fragment col-span-4" data-fragment-index="1">
-      Create by georeferening any IIIF map
+      Georeference any IIIF map
     </div>
     <div class="fragment col-span-2 font-bold" data-fragment-index="2">
       Allmaps Viewer
     </div>
     <div class="fragment col-span-4" data-fragment-index="2">
-      View in browser
+      View georeferenced IIIF maps in browser
     </div>
     <div class="fragment col-span-2 font-bold" data-fragment-index="3">
       Allmaps OpenLayers <br />Allmaps Leaflet<br />Allmaps MapLibre
     </div>
     <div class="fragment col-span-4" data-fragment-index="3">
-      Plugin to webmap
+      Plugins for web mapping frameworks
     </div>
     <div class="fragment col-span-2 font-bold" data-fragment-index="4">
       Allmaps Tile Server
     </div>
     <div class="fragment col-span-4" data-fragment-index="4">
-      Add to app via XYZ tiles
+      Proxy server that turns Georeference Annotations <br />
+      into XYZ tile layers
     </div>
     <div class="fragment col-span-2 font-bold" data-fragment-index="5">
       Allmaps CLI
     </div>
     <div class="fragment col-span-4" data-fragment-index="5">
-      Use to transform points, generate GeoTIFFs, ...
+      Command-line interface to transform coordinates, <br />
+      generate GeoTIFFs and much more
     </div>
   </div>
   <div class="fragment absolute top-0 left-0 w-full h-full text-left">
@@ -424,7 +431,7 @@
       <MapMonster mood="happy" color="yellow">
         <p class="p-4 strong max-w-xl text-3xl">
           Meanwhile, <strong>Allmaps API</strong> keeps track of annotations
-          created in Editor, thus constructing a public database of
+          created in Allmaps Editor, thus constructing a public database of
           <i>all maps</i>...
         </p></MapMonster
       >
@@ -438,7 +445,7 @@
     <ol class="space-y-6 text-3xl">
       <li>
         Build <strong>tranformation</strong>
-        <code>image→geo</code> from GCPs
+        <code>image↔︎geo</code> from GCPs
       </li>
       <li>Find <strong>IIIF zoom-level & tiles</strong> for viewport</li>
       <li class="invisible">
@@ -489,7 +496,10 @@
 <section bind:this={sectionMapMonsters1} class="gap-2 grid-cols-7 grid-rows-5">
   <!-- TODO other monsters! -->
   {#each Array(16) as _, i (`${i}-${mapMonsterCounter}`)}
-    <div class={mapMonstersClass} style:transform={randomTransform()}>
+    <div
+      class="{mapMonstersClass} flex items-center"
+      style:transform={randomTransform()}
+    >
       <MapMonster
         mood={randomMood()}
         color={randomColor()}
@@ -497,10 +507,15 @@
       />
     </div>
   {/each}
-  <div class="col-span-3 row-span-1">Some cool features</div>
+  <div class="col-span-3 row-span-1 flex items-center">
+    <p>Some cool features</p>
+  </div>
 
   {#each Array(16) as _, i (`${i}-${mapMonsterCounter}`)}
-    <div class={mapMonstersClass} style:transform={randomTransform()}>
+    <div
+      class="{mapMonstersClass} flex items-center"
+      style:transform={randomTransform()}
+    >
       <MapMonster
         mood={randomMood()}
         color={randomColor()}
@@ -538,6 +553,11 @@
 </section>
 
 <section>
+  <!--
+  Mention
+  - Georeferencing using the coordinates of the corners
+  - For the Bonne map, the Bonne projection has been implemented in Proj4JS and used directly
+  -->
   <p>Map Series</p>
   <div class="flex flex-row gap-8 [&>*]:min-w-0">
     <img
@@ -565,23 +585,13 @@
   />
 </section>
 
-<!-- <section>
-  <p>Query annotation database using API</p>
-
-  <img
-    alt="Allmaps API Containedby"
-    loading="lazy"
-    src="/images/foss4g-benl-2024/api-containedby.png"
-  />
-</section> -->
-
 <section class="section-horizontal section-stretch">
   <!--
   Mention:
   - Reuse single source => Metadata conserved, Derivates of open images stay accessible
-  - Warp on device => Much faster process, Improvable georeferening
-  - Open data stays open => Reusable GCP data (e.g. distortions, transform), Acces via (API or) download dump
-  - FOSS tools you can host => Packages you can use, No vendor lock-in
+  - Warp on device => No backend needed, Much faster process,
+  - Open data stays open => Acces via (API or) download dump, Improvable & reusable GCP data (e.g. distortions, transform)
+  - FOSS tools you can host => No vendor lock-in, Packages you can use
   -->
   <img
     alt="Allmaps API Containedby"
@@ -592,7 +602,7 @@
     <h4>Principles</h4>
     <div class="space-y-4 text-3xl">
       <p>Reuse single source</p>
-      <p>Warp on device</p>
+      <p>Process images on device</p>
       <p>Open data stays open</p>
       <p>FOSS tools you can host</p>
     </div>
@@ -600,11 +610,8 @@
 </section>
 
 <section>
-  <!-- <div class="space-y-10">
-    <h4>Under the hood</h4>
-    <ol class="space-y-6 text-3xl"> -->
   <div class="mb-12">
-    <p>Use Allmaps' building blocks in your project</p>
+    <p>Use Allmaps JavaScript modules in your project</p>
   </div>
   <pre class="javascript">
       <code data-line-numbers="" data-trim data-noescape
@@ -626,8 +633,7 @@
     ></pre>
   <div class="space-y-6 mt-12 text-3xl text-gray-500">
     <p>
-      Transform geometries in TypeScript <br />
-      using <code>@allmaps/transform</code>
+      Transform geometries using <code>@allmaps/transform</code>
     </p>
   </div>
 </section>
@@ -648,30 +654,6 @@
   </div>
 </section>
 
-<section bind:this={sectionMapMonsters1} class="gap-2 grid-cols-7 grid-rows-5">
-  <!-- TODO other monsters! -->
-  {#each Array(16) as _, i (`${i}-${mapMonsterCounter}`)}
-    <div class={mapMonstersClass} style:transform={randomTransform()}>
-      <MapMonster
-        mood={randomMood()}
-        color={randomColor()}
-        shape={Math.floor(randomFromInterval(0, 5))}
-      />
-    </div>
-  {/each}
-  <div class="col-span-3 row-span-1">Bonus round!</div>
-
-  {#each Array(16) as _, i (`${i}-${mapMonsterCounter}`)}
-    <div class={mapMonstersClass} style:transform={randomTransform()}>
-      <MapMonster
-        mood={randomMood()}
-        color={randomColor()}
-        shape={Math.floor(randomFromInterval(0, 5))}
-      />
-    </div>
-  {/each}
-</section>
-
 <section class="">
   <p>Georeferencing 1832 cadaster maps of Baarle</p>
   <iframe
@@ -689,43 +671,17 @@
     title="Observable notebook Baarle"
     class="h-[80vh]"
     frameborder="0"
-    src="https://observablehq.com/embed/@allmaps/baarle@1230?cells=viewof+selectedEnclave%2Ccontainer%2Cviewof+opacity%2Cviewof+saturation%2Cviewof+threshold%2Cviewof+hardness%2Cviewof+hexColor%2Cviewof+colorize%2Cviewof+colorizeHexColor"
+    src="https://observablehq.com/embed/@allmaps/baarle?cells=container"
   ></iframe>
-  <div
-    class="fragment absolute bottom-0 right-0 w-1/2 h-full text-left flex items-end px-24 py-12 z-10"
-  >
-    <MapMonster mood="excited" color="purple">
-      <div class="max-w-md p-4">
-        <p class="text-left text-3xl">Explore this notebook:</p>
-        <a href="https://observablehq.com/embed/@allmaps/baarle">
-          <img
-            class="w-96"
-            alt="QR code that links to this notebook"
-            src="/images/foss4g-benl-2024/qr-code-notebook.svg"
-          /></a
-        >
-      </div>
-    </MapMonster>
-  </div>
 </section>
 
-<!-- <section class="section-stretch">
-  <p>Allmaps Arcade</p>
-  <video
-    class="shadow-lg"
-    muted
-    data-loop
-    data-autoplay
-    data-src="/videos/iiif-annual-conference-2024/allmaps-arcade.webm"
-  />
-  <p>
-    → <a class="underline" href="https://arcade.allmaps.org"
-      >arcade.allmaps.org</a
-    >
-  </p>
-</section> -->
-
 <section>
+  <!--
+    Mention:
+    - Sharing this because our fails are beautiful and part of the way there for everybody
+    - Nod to team at Mapbox (while still FOSS) who shared the 'bad maps' they accidentally made
+    - For all the FOSS projects Allmaps uses under the hood, you can't build tools like this without standing on the shoulders of giants that came before you
+  -->
   <p class="p-8">Accidental shader art</p>
   <div class="grid grid-rows-2 grid-cols-3 gap-10 text-left p-4 text-3xl">
     {#each [1, 2, 3, 4, 5, 6] as index}
@@ -738,6 +694,15 @@
   </div>
 </section>
 
+<section>
+  <a href="https://openmapsmeeting.nl/">
+    <img
+      alt="QR code that links to these slides"
+      src="/images/foss4g-benl-2024/openmapsmeeting_2024.jpg"
+    /></a
+  >
+</section>
+
 <section class="section-horizontal section-stretch section-no-logo">
   <div>
     <p class="p-6">Thanks!</p>
@@ -747,21 +712,29 @@
         >github.com/allmaps</a
       >
     </p>
-  </div>
-  <div
-    class="fragment absolute bottom-0 right-0 w-1/2 h-full text-left flex items-end px-24 py-12"
-  >
-    <MapMonster mood="excited" color="purple">
-      <div class="max-w-md p-4">
-        <p class="text-left">This presentation:</p>
-        <a href="https://presentations.allmaps.org/foss4g-benl-2024">
-          <img
-            class="w-96"
-            alt="QR code that links to these slides"
-            src="/images/foss4g-benl-2024/qr-code.svg"
-          /></a
-        >
-      </div>
-    </MapMonster>
+    <p class="text-3xl text-gray-500 p-10">
+      <a class="underline" href="https://observablehq.com/@allmaps/baarle"
+        >observablehq.com/@allmaps/baarle</a
+      ><br />
+      <a class="underline" href="https://openmapsmeeting.nl/"
+        >openmapsmeeting.nl</a
+      >
+    </p>
+    <div
+      class="fragment absolute bottom-0 right-0 w-1/2 h-full text-left flex items-end px-24 py-12"
+    >
+      <MapMonster mood="excited" color="purple">
+        <div class="max-w-md p-4">
+          <p class="text-left">This presentation:</p>
+          <a href="https://presentations.allmaps.org/foss4g-benl-2024">
+            <img
+              class="w-96"
+              alt="QR code that links to these slides"
+              src="/images/foss4g-benl-2024/qr-code.svg"
+            /></a
+          >
+        </div>
+      </MapMonster>
+    </div>
   </div>
 </section>

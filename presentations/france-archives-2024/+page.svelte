@@ -140,52 +140,6 @@
 <Title dark={false}>
   <h2>Allmaps</h2>
   <p>Open source tools for curating, georeferencing and exploring IIIF maps</p>
-  <div
-    class="fragment absolute top-0 left-0 w-full h-full bg-white/70 text-left text-4xl"
-  >
-    <div class="flex items-end h-full px-24 py-12">
-      <MapMonster mood="neutral" color="green">
-        <p class="p-4 max-w-xl">IIIF maps?</p>
-      </MapMonster>
-    </div>
-  </div>
-  <div class="fragment absolute top-0 left-0 w-full h-full text-left text-4xl">
-    <div class="flex items-end h-full px-24 py-12">
-      <MapMonster mood="happy" color="pink">
-        <p class="p-4 max-w-xl">
-          International<br />Image<br />Interoperability<br />Framework!
-        </p>
-      </MapMonster>
-    </div>
-  </div>
-  <div class="fragment absolute top-0 left-0 w-full h-full text-left text-4xl">
-    <div class="flex items-end h-full px-24 py-12">
-      <MapMonster mood="neutral" color="green">
-        <p class="p-4 max-w-xl">
-          International<br />Image<br />Interoperability<br />Framework?
-        </p>
-      </MapMonster>
-    </div>
-  </div>
-  <div class="fragment absolute top-0 left-0 w-full h-full text-left text-4xl">
-    <div class="flex items-end h-full px-24 py-12">
-      <MapMonster mood="happy" color="pink">
-        <ul class="px-12 py-4 max-w-xl space-y-8">
-          <li>
-            <strong>Open standards</strong> for sharing images and metadata
-          </li>
-          <li>Used by <strong>archives</strong>, libraries and museums</li>
-          <li>
-            Images of paintings, books, ... and <strong>maps</strong>!
-          </li>
-          <li>
-            Serving high resolution images using <strong>tiles</strong> in
-            different <strong>zoom levels</strong>
-          </li>
-        </ul>
-      </MapMonster>
-    </div>
-  </div>
 </Title>
 
 <section>
